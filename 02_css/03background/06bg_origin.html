@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 이미지 기준</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      margin-bottom: 50px;
+      width: 400px;
+      height: 200px;
+      border: 10px dotted red;
+      padding: 35px;
+      background-image: url('./img/bg8.png');
+      background-repeat: no-repeat;
+    }
+
+    .bg1 {
+      background-origin: padding-box;
+      /* 기본값 */
+    }
+
+    .bg2 {
+      background-origin: border-box;
+      /* 테두리까지 배경 이미지가 적용됨 */
+    }
+
+    .bg3 {
+      background-origin: content-box;
+      /* 내용 영역까지만 배경 이미지가 적용됨 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quo quos qui accusantium labore
+    provident neque velit illo? Quibusdam, explicabo!</div>
+  <div class="bg2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quo quos qui accusantium labore
+    provident neque velit illo? Quibusdam, explicabo!</div>
+  <div class="bg3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos quo quos qui accusantium labore
+    provident neque velit illo? Quibusdam, explicabo!</div>
+
+
+</body>
+
+</html>

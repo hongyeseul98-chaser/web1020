@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-image 속성</title>
+  <style>
+    body {
+      background-image: url('./img/bg1.png');
+      background-repeat: repeat; /* 기본값 */
+      background-repeat: repeat-x; /* 가로 방향으로만 반복 */
+      background-repeat: repeat-y; /* 세로 방향으로만 반복 */
+      background-repeat: no-repeat; /* 반복하지 않음 */
+    }
+
+    .rp {
+      width: 500px;
+      height: 500px; 
+      border: 10px solid red;
+      background-image: url('./img/bg8.png');
+      background-size: 220px; 
+      background-repeat: space; /* 이미지가 잘리지 않도록 여백을 두고 반복 */
+      background-repeat: round; /* 영역에 맞게 반복하면서 크기 자동 조정 */
+    }
+  </style>
+</head>
+<body>
+  <div class="rp"></div>
+</body>
+</html>

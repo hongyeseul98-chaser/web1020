@@ -1,0 +1,12 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Diphylleia&family=Gasoek+One&family=Gowun+Dodum&display=swap');
+
+.w_font1 {
+  font-family: "Gasoek One", sans-serif;
+}
+.w_font2 {
+  font-family: "Gowun Dodum", sans-serif;
+}
+.w_font3 {
+  font-family: "Diphylleia", serif;
+}

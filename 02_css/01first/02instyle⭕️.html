@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내부 스타일 시트</title>
+
+  <style>
+    /* 전체선택자 별(*) */
+    * {
+      margin: 0;
+      /* 바깥 여백 */
+      padding: 0;
+      /* 안쪽 여백 */
+    }
+
+    #container {
+      background-color: blueviolet;
+    }
+
+    section {
+      background-color: greenyellow;
+      width: 300px;
+      border: 5px solid #ccc;
+      margin: 10px;
+      /* 바깥 여백 */
+      padding: 20px;
+      /* 안쪽 여백 */
+    }
+
+    h2 {
+      color: green;
+    }
+  </style>
+  <link rel="stylesheet" href="./css/style.css"> 
+  <!-- 같은 레벨일 경우 스타일이 뒤에 오면 덮어씀 -->
+</head>
+
+<body>
+  <div id="container">
+    <section>
+      <h2>who am i?</h2>
+      <p>
+        프로덕트 디자인에 관심이 많습니다.<br>
+        현재 강남 이젠 아카데미에서 디자인 공부 중입니다.
+      </p>
+    </section>
+  </div>
+</body>
+
+</html>

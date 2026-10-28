@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css positioning</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 기준점: 엄마에게 포지션 부여 */
+    #wrap {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #333;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      background: rgba(255, 0, 255, .8);
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      position: absolute;
+      /* 자식 박스는 절대 위치 */
+    }
+
+    .box1 {
+      right: 0;
+      bottom: 0;
+    }
+
+    .box2 {
+      right: 0;
+    }
+
+    .box3 {
+      bottom: 0;
+    }
+
+    .box4 {
+      /* 
+      방법1
+      left: 125px;
+      top: 125px; 
+      */
+
+      /* 방법2. width의 절반만큼 왼쪽으로 이동 */
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      /* 박스를 정확히 가운데로 위치 */
+
+
+      /* 방법3
+      margin-left: -25px;
+      margin-top: -25px;
+       */
+    }
+
+    .box5 {
+      top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+    <div class="box box5">박스5</div>
+  </div>
+
+</body>
+
+</html>

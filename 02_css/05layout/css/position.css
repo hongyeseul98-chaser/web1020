@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-align: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* layout */
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  width: 1200px;
+  height: 100px;
+  background: rgba(100, 100, 0, .5);
+  position: fixed;
+  left: 50%;
+  top: 0; 
+  margin-left: -600px;
+  
+}
+
+header h1 {
+  float: left;
+  background: red;
+}
+
+header nav {
+  float: right;
+  background: hotpink;
+  width: 70%;
+  margin-top: 60px;
+}
+
+header nav ul.gnb {}
+
+/* 꺽쇠: 바로 밑의 자식 요소 li */
+header nav ul.gnb>li {
+  width: 25%;
+  background: #ccc;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+
+header nav ul.gnb>li>a {
+  height: 40px;
+  background: #fff;
+  display: block;
+  line-height: 40px;
+}
+
+header nav ul.gnb>li>ul.lnb {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: lawngreen;
+  width: 100%;
+  display: none;
+}
+
+header nav ul.gnb>li:hover>ul.lnb {
+  display: block;
+}
+
+header nav ul.gnb>li>ul.lnb li {
+  height: 50px;
+  line-height: 50px;
+}
+
+header nav ul.gnb>li>ul.lnb li:hover {
+  background: red;
+}
+
+header nav ul.gnb>li>ul.lnb li a {
+  display: block;
+}
+
+section.contents {
+  height: 2000px;
+  background: blue;
+  margin-top: 100px;
+}
+
+footer {
+  height: 100px;
+  background: palegoldenrod;
+}

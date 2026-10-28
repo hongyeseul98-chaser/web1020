@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 표만들기 (thead, tbody, tfoot)</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+
+    thead,
+    tfoot {
+      background-color: #eee;
+    }
+
+    th,
+    td {
+      padding: 10px 20px;
+      width: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+  thead: 표의 헤더 부분, 보통 제목 열(셀)들을 포함
+  tbody: 표의 본문 부분, 데이터 열(셀)들을 포함
+  tfoot: 표의 바닥글 부분, 보통 합계나 요약 열(셀)들을 포함
+
+  웹 접근성 측면에서 thead, tbody, tfoot를 사용하면 스크린리더가 표의 구조를 더 잘 이해할 수 있음
+  표의 본문이 길어질 경우, 자바스크립트로 스크롤을 구현할 때 thead와 tfoot를 고정시키고 tbody만 스크롤되도록 할 수 있음
+    -->
+  <table>
+    <!-- ⚠️ caption은 무조건 table 바로 아래에 첫 번째로 작성해야 합니다 -->
+    <caption>요안도라 객실</caption>
+    <thead>
+      <tr>
+        <th>방이름</th>
+        <th>대상</th>
+        <th>크기</th>
+        <th>가격</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>유채방</th>
+        <td>여성 도미토리</td>
+        <td rowspan="3">4인실</td>
+        <td rowspan="4">1인 20,000원</td>
+      </tr>
+      <tr>
+        <th rowspan="2">동백방</th>
+        <td>동성 도미토리</td>
+      </tr>
+      <tr>
+        <td>가족1팀</td>
+      </tr>
+      <tr>
+        <th>천혜향방</th>
+        <td>-</td>
+        <td>2인실</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th colspan="4">바깥체 전체를 렌트합니다.</th>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>

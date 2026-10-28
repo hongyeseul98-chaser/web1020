@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-size 속성</title>
+  <style>
+    div {
+      background-image: url('./img/1295.png');
+      width: 500px;
+      height: 400px;
+      border: 2px dotted red;
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+
+    .bg1 {
+      background-size: auto;
+      /* 기본값: 이미지 원본 사이즈 */
+    }
+
+    .bg2 {
+
+      background-size: 200px 150px;
+      /* 이미지 크기를 고정된 픽셀 값으로 설정 */
+    }
+
+    .bg3 {
+      background-size: 60% 40%;
+      /* 요소 크기의 절반으로 이미지 축소 */
+    }
+
+    .bg4 {
+      background-size: contain;
+      /* 요소 안에 이미지가 완전히 들어가도록 크기 조정 */
+    }
+
+    .bg5 {
+      background-size: cover;
+      /* 요소를 가득 채우도록 이미지 크기 조정 */
+      background-position: center;
+      /* 이미지 위치를 가운데로 설정 */
+    }
+
+    .bg6 {
+      background-size: 100% 100%;
+      /* 요소 크기에 맞게 이미지 늘리기 */
+    }
+  </style>
+</head>
+
+<body>
+  <!--div 6개 만들기 단축키: .bg$*6 -->
+  <div class="bg1"></div>
+  <div class="bg2"></div>
+  <div class="bg3"></div>
+  <div class="bg4"></div>
+  <div class="bg5"></div>
+  <div class="bg6"></div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>datalist 예제</title>
+
+  <!-- 알아둘 것
+  input과 datalist를 연결해서 선택지를 제공하는 방법 
+  ① input의 list 속성과 datalist의 id를 같게 하기
+  ② datalist 안에 option으로 선택지 만들기
+  ③ option의 value와 label 속성 이해하기
+  ④ textarea의 cols와 rows 속성 이해하기
+  -->
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>수강 과목을 신청하세요</legend>
+      <!-- 글자를 입력할 수 있는 칸이에요.
+       list="choices"는 아래에 있는 id="choices"인 datalist와 연결해 줘요. 입력 칸과 선택지 목록을 연결해요.
+       연결하면 미리 준비된 선택지를 골라서 입력할 수 있어요. -->
+      <input type="text" list="choices">
+
+
+      <!-- datalist는 미리 준비한 선택지 목록을 만들어요.
+       input의 list 속성과 datalist의 id가 같아야 서로 연결돼요. -->
+      <datalist id="choices">
+
+        <!-- option은 선택지 하나를 만들어요.
+         value: 선택했을 때 실제로 입력되는 값
+         label: 선택지를 설명하는 글자 -->
+        <option value="grammar" label="문법"></option>
+        <option value="voca" label="어휘"></option>
+        <option value="speaking" label="회화"></option>
+        <option value="listening" label="듣기"></option>
+        <option value="news" label="뉴스"></option>
+      </datalist>
+    </fieldset>
+
+    <!-- 
+    textarea : 여러 줄 입력 가능 
+    cols : 가로 길이
+    rows : 세로 길이
+    -->
+    <textarea cols="60" rows="5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo repellendus ut consequatur minus consequuntur aspernatur culpa, veritatis exercitationem nulla quod voluptatibus doloremque, et quibusdam quam atque! Earum esse autem optio!
+    </textarea>
+  </form>
+</body>
+
+</html>

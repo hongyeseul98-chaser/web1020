@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 표만들기 (table, th, td)</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+  table: 표
+  tr: Table Row 표의 행
+  th: Table Header 표의 제목 열(셀)
+  td: Table Data 표의 열(데이터 셀)
+    -->
+  <table>
+    <!-- ⚠️ caption은 무조건 table 바로 아래에 첫 번째로 작성해야 합니다 -->
+    <!--  추가 설명: 기본텍스트 중앙 정렬 -->
+    <caption>표의 구성요소</caption>
+    <tr>
+      <th>주제</th>
+      <th>태그</th>
+      <th>비교</th>
+    </tr>
+    <tr>
+      <th>테이블 구성요소</th>
+      <td>table</td>
+      <td>테이블을 만드는 태그</td>
+    </tr>
+    <tr>
+      <th>테이블 구성요소</th>
+      <td>tr</td>
+      <td>테이블의 행을 만드는 태그</td>
+    </tr>
+    <tr>
+      <th>테이블 구성요소</th>
+      <td>th</td>
+      <td>테이블의 제목 열(셀)을 만드는 태그</td>
+    </tr>
+    <tr>
+      <th>테이블 구성요소</th>
+      <td>td</td>
+      <td>테이블의 열(데이터 셀)을 만드는 태그</td>
+    </tr>
+  </table>
+</body>
+
+</html>

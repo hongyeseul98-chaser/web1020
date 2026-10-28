@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-content</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      width: 500px;
+      height: 500px;
+      flex-wrap: wrap;
+      align-content: stretch; /* 기본값: 아이템들이 교차축 방향으로 늘어남 */
+      align-content: flex-start; /* 아이템들을 교차축의 시작점으로 정렬 */
+      align-content: flex-end; /* 아이템들을 교차축의 끝점으로 정렬 */
+      align-content: center; /* 아이템들을 교차축의 중앙으로 정렬 */
+      align-content: space-between; /* 사이 */
+      align-content: space-around; /* 주위 */
+      align-content: space-evenly; /* 균등 */
+    }
+  </style>
+</head>
+<body>
+  <div class="flex_container">
+    <div class="flex_item">AAAAAAAAAAAA</div>
+    <div class="flex_item">BBB</div>
+    <div class="flex_item">CCCCCCCCC</div>
+    <div class="flex_item">DDDDDDDDDDDDDDDDDDDDDDD</div>
+    <div class="flex_item">EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</div>
+  </div>
+</body>
+</html>

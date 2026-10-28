@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+    }
+    .flex_item:nth-child(1) {
+      width: 150px; /* 고정 */
+      flex-shrink: 0; /* 축소 방지 */
+    }
+    .flex_item:nth-child(2) {
+      flex-grow: 1; /* 남은 공간을 채우도록 설정 */
+    }
+    .flex_item:nth-child(3) {
+      width: 200px; /* 고정 */
+      flex-shrink: 0; /* 축소 방지 */
+    }
+  </style>
+</head>
+<body>
+  <div class="flex_container">
+    <div class="flex_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, recusandae.</div>
+    <div class="flex_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, recusandae.</div>
+    <div class="flex_item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, recusandae.</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 태그 (절대경로:서버링크, 이미지 주소복사) ex.용눈이 오름</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+
+    thead,
+    tfoot {
+      background-color: #eee;
+    }
+
+    th,
+    td {
+      padding: 10px 20px;
+      width: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- figure 태그는 이미지와 그에 대한 설명을 함께 묶는 데 사용됩니다 (img, figcaption)-->
+  <figure>
+    <img
+      src="https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202307/27/ef114ddd-c10d-4717-95fa-419902728bb5.jpg"
+      alt="용눈이 오름 중앙일보꺼">
+    <figcaption>완만하고 부드러운 용눈이 오름</figcaption>
+  </figure>
+  <figure>
+    <!-- 
+    ⚠️ figurecaption은 <figure> 내부의 중간(예: 두 이미지 사이)에 배치하거나, <figure> 태그 밖에 단독으로 사용하면 HTML5 표준 문법에 어긋납니다. 
+    올바른 사용법은 <figure> 내부 상단(가장 흔함) 또는 하단에 배치하는 것입니다.
+    -->
+    <!-- 추가 설명: 기본텍스트 좌측 정렬 -->
+    <figcaption>요안도라 객실</figcaption>
+    <table>
+      <thead>
+        <tr>
+          <th>방이름</th>
+          <th>대상</th>
+          <th>크기</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>유채방</th>
+          <td>여성 도미토리</td>
+          <td rowspan="3">4인실</td>
+          <td rowspan="4">1인 20,000원</td>
+        </tr>
+        <tr>
+          <th rowspan="2">동백방</th>
+          <td>동성 도미토리</td>
+        </tr>
+        <tr>
+          <td>가족1팀</td>
+        </tr>
+        <tr>
+          <th>천혜향방</th>
+          <td>-</td>
+          <td>2인실</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">바깥체 전체를 렌트합니다.</th>
+        </tr>
+      </tfoot>
+    </table>
+  </figure>
+</body>
+
+</html>

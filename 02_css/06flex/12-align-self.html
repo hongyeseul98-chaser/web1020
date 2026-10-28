@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-self</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      height: 100vh; /* 주축이 세로 방향, 교차축이 가로 방향이 됨, height 값을 나눠 가질 예정 */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex_item:nth-child(2) {
+      align-self: auto;
+      /* auto: 부모의 align-items 속성을 따름 */
+      align-self: stretch;
+      /* stretch: 부모의 align-items 속성과 상관없이 교차축 방향으로 늘어남 */
+      align-self: flex-start;
+      /* flex-start: 교차축의 시작점에 정렬 */
+      align-self: flex-end;
+      /* flex-end: 교차축의 끝점에 정렬 */
+      align-self: baseline;
+      /* baseline: 교차축의 기준선에 정렬 */
+      align-self: center;
+      /* center: 교차축의 중앙에 정렬 */
+      
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">aaaaaaa</div>
+    <div class="flex_item">bbb</div>
+    <div class="flex_item">cccc</div>
+  </div>
+</body>
+
+</html>

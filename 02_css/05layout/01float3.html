@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout</title>
+
+  <!-- 🔥매우중요🔥
+
+    float 무효화
+
+    1. clear:both 다시 시작할 때 사용
+    2. overflow:hidden
+    3. clearfix를 만들어서 부모에게 적용
+    clearfix ::after{} 
+    content:'';
+    display: block;
+    clear: both;
+    clearfix를 적용하면 float 요소가 부모 요소 밖으로 나가지 않음
+   -->
+    
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* clearfix: float 요소를 포함하는 부모 요소의 높이를 자동으로 맞춤 */
+    /* 깨는 용도: float 요소가 부모 요소 밖으로 나가는 것을 방지하기 위해 사용 */
+    .clearfix::after {
+      content: '';
+      display: block;
+      /* 블록 요소로 만들어서 clear가 적용되도록 함 */
+      clear: both;
+      /* 좌우 float 요소를 모두 정리 */
+    }
+
+    a {
+      color: inherit;
+      /* 부모 요소의 글자색을 상속 */
+      text-decoration: none;
+      /* 링크 밑줄 제거 */
+    }
+
+    body,
+    h2 {
+      font-size: 30px;
+    }
+
+    .container {
+      width: 1080px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background: pink;
+    }
+
+    nav ul li {
+      background: lemonchiffon;
+      width: 25%;
+      float: left;
+    }
+
+    nav ul li a {
+      border-right:1px solid #333;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    /* last-child: 마지막 li의 a에 적용 */
+    /* 마지막 메뉴의 오른쪽 테두리를 제거 */
+    nav ul li:last-child a{
+      border-right: 0; /* 또는 none */
+    }
+    main {
+      background: #ccc;
+    }
+
+    header {
+      background: red;
+      width: 250px;
+      height: 500px;
+      float: left;
+    }
+
+    .con1 {
+      background: green;
+      width: 250px;
+      height: 500px;
+      float: left;
+    }
+
+    .con2 {
+      background: blue;
+      width: 560px;
+      height: 500px;
+      float: right;
+    }
+
+    footer {
+      background: lemonchiffon;
+      height: 80px;
+      border: 2px solid #333;
+    }
+
+    footer .container {
+      background: gold;
+    }
+
+    .box1{
+      width: 40%;
+      height: 60px;
+      background: lightgreen;
+      float: left;
+    }
+    .box2{
+      width: 40%;
+      height: 60px;
+      background: lightblue;
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav class="container">
+      <ul class="gnb clearfix">
+        <li><a href="#">메뉴1</a></li><!-- # : 맨 위로 올라가기 -->
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li> <!-- li의 4번임, a의 4번이 아님 -->
+      </ul>
+    </nav>
+    <main class="container clearfix">
+      <header>header</header>
+      <section class="con1">
+        <h2>con1</h2>
+      </section>
+      <section class="con2">
+        <h2>con2</h2>
+      </section>
+    </main>
+    <footer>
+      <div class="container clearfix">
+        <div class="box1">footer1</div>
+        <div class="box2">footer2</div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

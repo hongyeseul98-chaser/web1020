@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>select 태그</title>
+
+  <!-- 알아둘 것
+   ① label과 id의 연결
+   ② select의 size와 multiple
+   ③ option의 selected
+   ④ optgroup
+   ⑤ label 태그와 label 속성 비교
+      구분	예시	                역할
+      태그	<label>이름</label>	  입력 칸의 설명을 만들어요.
+      속성	label="공과대학"	    태그에 표시할 이름이나 설명을 지정해요.
+
+      한 줄로 기억하기: <label>은 설명을 만드는 태그이고, label="..."은 특정 태그에 이름을 지정하는 속성
+
+  
+   -->
+</head>
+
+<body>
+  <h1>여름 방학 특강 신청</h1>
+  <!-- form: 사용자가 입력한 정보를 제출하기 위한 양식이에요. -->
+  <form>
+    <!-- fieldset: 관련된 입력 항목들을 하나의 상자로 묶어요. -->
+    <fieldset>
+      <!-- legend: fieldset(입력 항목 상자)의 제목을 표시해요. -->
+      <legend>수강 신청인</legend>
+      <ul>
+        <li>
+          <!-- label: 입력 칸이 무엇을 입력하는 곳인지 알려줘요. -->
+          <label>학번<input type="number" autofocus></label>
+          <!-- type="number": 숫자를 입력하는 칸이에요. -->
+          <!-- autofocus: 페이지가 열렸을 때 해당 입력 칸에 자동으로 커서를 놓아요. -->
+        </li>
+        <li>
+          <label for="name">이름</label>
+          <input type="text" id="name">
+          <!-- type="text": 글자를 입력하는 칸이에요. -->
+        </li>
+        <li>
+          <label for="class">학과</label>
+          <!-- select: 여러 선택지 중에서 항목을 고르는 메뉴를 만들어요. -->
+          <!-- size: 보이는 항목 수 -->
+          <!-- multiple: 선택할 수 있는 항목 수, 여러 개 동시에 고르게 하기 -->
+          <select id="class" size="3" multiple>
+            <!-- option: 선택지 항목 하나를 만들어요. -->
+            <option value="a1">건축공학과1</option>
+            <option value="a2">건축공학과2</option>
+            <option value="a3" selected>건축공학과3</option>
+            <!-- selected: 페이지가 처음 열렸을 때 미리 선택되어 있는 항목이에요. -->
+            <option value="a4">건축공학과4</option>
+            <option value="a5">건축공학과5</option>
+            <option value="a6">건축공학과6</option>
+          </select>
+        </li>
+        <li>
+          <label for="class2">학과2</label>
+          <select id="class2">
+            <!-- optgroup: 선택지를 그룹으로 묶어줘요. label 속성: 그룹 이름 표시 -->
+            <optgroup label="공과대학">
+              <option value="b1">기계공학과1 </option>
+              <option value="b2">기계공학과2</option>
+              <option value="b3">기계공학과3</option>
+              <option value="b4">기계공학과4</option>
+            </optgroup>
+            <optgroup label="인문대학">
+              <option value="c1">사학과</option>
+              <option value="c2">어문학부</option>
+              <option value="c3">철학과</option>
+            </optgroup>
+          </select>
+        </li>
+      </ul>
+    </fieldset>
+  </form>
+</body>
+
+</html>

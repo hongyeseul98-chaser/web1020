@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>radio checkbox</title>
+
+  <!-- 알아둘 것
+    ① radio와 checkbox의 차이
+      radio: 여러 개 중에서 하나만 선택 가능
+      checkbox: 여러 개 선택 가능
+
+    ② name이 같은 라디오 버튼끼리 하나의 그룹이 된다.
+    ③ checked:처음부터 선택해 두는 속성
+  -->
+<!-- 헷갈릴 부분
+    ① name, value, id는 역할이 달라요
+      name: 그룹을 구분하는 이름, 같은 그룹을 묶는 역할 (라디오 버튼에서 중요)
+      value: 선택했을 때 전달할 값
+      id: 특정 요소를 구별하는 이름표, label과 연결할 때 사용
+    
+    ② label은 id가 없어도 연결할 수 있어요
+       <label> 안에 <input>을 넣으면 자동으로 연결됩니다. but, css 디자인할 때는 id와 for를 사용하는 것이 편리합니다.
+    
+    ③ 체크박스에는 name을 지정하는 것이 좋아요
+       그래야 서버로 전송될 때 같은 그룹으로 묶여서 전달됩니다.
+-->
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>신청과목</legend>
+      <p>uiux 툴 중에서 듣고 싶은 강의를 선택하세요 (1과목만 가능)</p>
+      <!-- 라디오버튼은 여러개 중에서 하나만 선택하는 것이기 때문에 관련있는 그룹끼리는 name 속성값을 똑같이 만듭니다 -->
+      <label><input type="radio" value="figma" name="uiux" checked>피그마</label><!-- name으로 묶어서 택1만 가능하게 -->
+      <!-- checked 속성으로 기본 선택 설정 /포트폴리오 만들 때 기본으로 선택되게 -->
+      <label><input type="radio" value="photoshop" name="uiux">포토샵</label>
+      <input type="radio" value="illust" name="uiux" id="illust"> <!-- id 설정하지 않으면 이름눌러도 선택안됨 -->
+      <label for="illust">일러스트</label>
+    </fieldset>
+    
+    <fieldset>
+      <legend>메일링</legend>
+      <p>메일로 받고 싶은 uiux 주제를 선택해주세요 (복수 선택 가능)</p>
+      <label><input type="checkbox" value="uiux" >uiux</label>
+      <label><input type="checkbox" value="design">design</label>
+      <label><input type="checkbox" value="uiuxvideo">uiuxvideo</label>
+      <label><input type="checkbox" value="ai활용">ai활용</label>
+    </fieldset>
+
+  </form>
+</body>
+
+</html>

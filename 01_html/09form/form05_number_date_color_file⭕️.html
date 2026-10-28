@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>number range date color file</title>
+  <!-- input 태그의 다양한 type과 숫자 범위를 조절하는 속성 -->
+
+  <!-- 알아둘 것
+  ① min, max, step, value 구분하기
+    min: 입력 가능한 최소값
+    max: 입력 가능한 최대값
+    step: 간격, 값의 증가 단위
+    value: 입력 칸에 미리 넣어둘 실제 값
+    날짜·시간 입력 유형(date, month, week, time, datetime-local)은 브라우저에서 제공하는 UI를 통해 입력 가능
+
+  ② number와 range는 달라요
+    number: 사용자가 직접 값을 입력할 수 있음, when.정확한 숫자를 입력할 때 적합
+    range: 슬라이더를 통해 값을 선택, when.만족도나 단계처럼 범위 안에서 값을 고를 때 적합
+
+  ③ 날짜와 시간 입력 유형 구분하기
+    date: 2026-10-20
+    month: 2026-10
+    week: 2026-W43
+    time: 09:00
+    datetime-local: 2026-10-20T09:00 (연-월-일 시:분), 날짜와 시간 사이에 T(날짜와 시간을 구분해 주는 문자)를 넣어 작성
+
+  ④ color와 file
+    color: 색상 선택
+    file: 파일 선택
+  -->
+
+<!-- 헷갈릴 부분
+  ①value는 입력 유형(type)에 따라 의미가 조금씩 다르다.
+    <input type="number" value="1">
+    <input type="time" value="09:00">
+    <input type="color" value="#FF0505">
+
+   -->
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>number range</legend>
+      <ul>
+        <li>
+          <label for="num">참여인원<small>(최대10명)</small></label>
+          <input type="number" id="num" value="1" min="0" max="10">
+        </li>
+        <li>
+          <label for="num2">지원물품<small>(1인당 5개)</small></label>
+          <input type="number" id="num2" min="0" max="50" value="0" step="5">
+        </li>
+        <li>
+          <label for="sat">희망단계<small>(하,중,상)</small></label>
+          <input type="range" id="sat" min="1" max="3" value="1">
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>date / month / week / time / datetime-local</legend>
+      <ul>
+        <li><label>날짜<input type="date"></label></li>
+        <li><label>월<input type="month"></label></li>
+        <li><label>주<input type="week"></label></li>
+      </ul>
+
+      <h2>시간 입력</h2>
+      <ul>
+        <li>
+          <label>시작시간<input type="time" value="09:00"></label>
+          <label>종료시간<input type="time" value="17:50"></label>
+        </li>
+        <li>
+          <label>시작시간<input type="datetime-local" value="2026-10-20T09:00"></label>
+          <label>종료시간<input type="datetime-local" value="2027-04-07T17:50"></label>
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>color / file</legend>
+      <label>색상 선택 : <input type="color" value="#FF0505"></label>
+      <label>파일 선택 : <input type="file"></label>
+    </fieldset>
+  </form>
+</body>
+
+</html>

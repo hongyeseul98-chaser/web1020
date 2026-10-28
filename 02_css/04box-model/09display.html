@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      margin: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    img {
+      width: 300px;
+    }
+
+    /* inline 이미지 두 번째 숨기기, 자리는 있음 */
+    #inline img:nth-child(2) {
+      visibility: hidden;
+    }
+
+    #block img {
+      display: block;
+    }
+
+    /* block 이미지 두 번째 숨기기, 화면에서 완전히 제거 */
+    #block img:nth-child(2) {
+      display: none;
+    }
+    
+    ul{
+      width: 500px;
+      margin: 0 auto;
+      background: #ccc;
+    }
+
+    li{
+      background:khaki;
+      width: 100px;
+      display: inline; /* 가로로 나열 */
+      display: inline-block; /* 가로로 나열, 블록 속성 유지 */
+    }
+
+    a{ /* a는 인라인 */
+      color: inherit; /* 부모 요소의 색상을 상속받음 :부모 검정색*/
+      text-decoration: none; /* 링크 밑줄 제거 */
+      background: lightcoral;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="inline">
+    <img src="https://file2.nocutnews.co.kr/newsroom/image/2026/06/22/202606220447290357_0.jpg" alt="허남준">
+    <img src="https://file2.nocutnews.co.kr/newsroom/image/2026/06/22/202606220447290357_0.jpg" alt="허남준">
+    <img src="https://file2.nocutnews.co.kr/newsroom/image/2026/06/22/202606220447290357_0.jpg" alt="허남준">
+
+  </div>
+  <div id="block">
+    <img src="https://file2.nocutnews.co.kr/newsroom/image/2026/06/22/202606220447290357_0.jpg" alt="허남준">
+    <img src="https://file2.nocutnews.co.kr/newsroom/image/2026/06/22/202606220447290357_0.jpg" alt="허남준">
+    <img src="https://file2.nocutnews.co.kr/newsroom/image/2026/06/22/202606220447290357_0.jpg" alt="허남준">
+  </div>
+  <nav>
+    <ul><!-- 불릿이 안보이는 것 뿐, li가 블록이기 때문에 밑으로 떨어짐 -->
+      <li><a href="">메뉴1</a></li>
+      <li><a href="">메뉴2</a></li>
+      <li><a href="">메뉴3</a></li>
+      <li><a href="">메뉴4</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>

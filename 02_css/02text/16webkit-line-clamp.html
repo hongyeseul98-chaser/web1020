@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>말줄임표: 두 줄 이상 처리</title>
+  <style>
+    .ellipsis_2{
+      border: 1px solid #ccc;
+      width: 220px;
+      display: -webkit-box; /* 다중 줄 말줄임표를 위해 필요 */
+      -webkit-box-orient: vertical; /* 세로 방향으로 박스를 배치 */
+      overflow: hidden; /* 넘치는 텍스트를 숨김 */
+      -webkit-line-clamp: 2; /* 두 줄 이상일 때 말줄임표 처리 */
+    }
+  </style>
+</head>
+<body>
+  <p class="ellipsis_2">
+    This is some text! This is some text! This is some text!
+    This is some text! This is some text! This is some text!
+  </p>
+</body>
+</html>

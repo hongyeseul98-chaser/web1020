@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>border-radius 속성</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      width: 100%;
+      height: auto;
+      display: flex;
+    }
+
+    div {
+      width: 300px;
+      height: 200px;
+      margin: 20px;
+      background: rgba(0, 255, 0, 0.1);
+    }
+
+    .round {
+      border-radius: 20px;
+      border: 1px solid black;
+      border-radius: 0 20px 30px 40px;
+      border-bottom-left-radius: 0;
+    }
+
+    #bg {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      background: url(https://i.namu.wiki/i/nO7P_clQOoh1JXZHCETAcz4p9o0OOu0TbzyxgJdIjXcn2JsCLN8QA2G0UyQvWb3RSLSbw_yF5tO15DSBGNp_zQ.webp) no-repeat center/cover;
+    }
+
+    .radius {
+      border: 1px solid red;
+      border-radius: 60px/20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="round"></div>
+    <div class="round" id="bg"></div>
+    <div class="radius">60px/20px</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .parent {
+      margin-top: 100px;
+    }
+
+    .flex_container {
+      display: flex;
+    }
+
+    /* flex : flex-grow, flex-shrink, flex-basis를 한 번에 설정하는 속성 */
+    .flex_item {
+      flex: 1 1 0;
+      flex: 1; /* basis 0 */
+    }
+    .con {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    /* con 클래스 안의 flex_item의 flex 비율 설정, 1:3:2 */
+    .con .flex_item:nth-child(1) {
+      flex: 1;
+    }
+    .con .flex_item:nth-child(2) {
+      flex: 3;
+    }
+    .con .flex_item:nth-child(3) {
+      flex: 2;
+    }
+
+    .parent .flex_item {
+      flex: 1 1 auto; /*  */
+      flex: 1 auto; /* basis 유지하고 싶을때 */
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container con">
+    <div class="flex_item">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae inventore deleniti dolor consectetur amet
+        aperiam enim deserunt ipsam harum, veritatis error. Vel odio repudiandae ab doloremque provident reiciendis
+        inventore facilis.</p>
+    </div>
+    <div class="flex_item">BB</div>
+    <div class="flex_item">CCCCCCC</div>
+  </div>
+  <div class="flex_container parent">
+    <div class="flex_item">1111111111111</div>
+    <div class="flex_item">22222222</div>
+    <div class="flex_item">333</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>input 태그 속성</title>
+  <!-- 알아둘 것
+    autofocus: 페이지가 열렸을 때 해당 입력 칸에 자동으로 커서가 놓임 (속성 이름만 작성)
+    placeholder: 입력란에 표시하는 힌트, 필드를 클릭하면 사라짐
+    readonly: 내용을 보기만 하고 입력하지 못하게 함 (속성 이름만 작성)
+    required: 필수 입력 필드 (속성 이름만 작성)
+    
+    em: <em>*</em>은 닉네임 옆 장식
+  -->
+
+  <!-- 헷갈릴 부분
+    placeholder와 value
+    placeholder는 입력란에 표시되는 힌트(안내문구)이고, value는 실제 입력된 값이다(사용자가 수정 가능).
+    value: 입력 칸에 미리 넣어둘 실제 값
+  -->
+  <style>
+    li {
+      margin-bottom: 5px;
+    }
+
+    em {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <ul>
+      <li>
+        <label for="name">이름</label>
+        <input type="text" id="name" autofocus>
+        <!-- autofocus : 페이지가 열렸을 때 해당 입력 칸에 자동으로 커서가 놓임-->
+      </li>
+      <li>
+        <label for="student-id">학번</label>
+        <input type="number" id="student-id" placeholder="하이픈 없이 입력">
+        <!-- placeholder: 입력란에 표시하는 힌트, 필드를 클릭하면 사라짐 -->
+      </li>
+      <li>
+        <label for="readonly_text">읽기만함</label>
+        <input type="text" id="readonly_text" value="못쳐요" readonly>
+        <!-- readonly : 내용을 보기만 하고 입력하지 못하게 함.-->
+      </li>
+      <li>
+        <label for="nickname"><em>*</em>닉네임</label>
+        <input type="text" id="nickname" required>
+        <!-- required : 필수 입력 필드 -->
+      </li>
+      <li>
+        <input type="submit" value="제출">
+      </li>
+    </ul>
+
+  </form>
+</body>
+
+</html>

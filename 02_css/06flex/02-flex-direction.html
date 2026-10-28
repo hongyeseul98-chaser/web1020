@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex-direction</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      flex-direction: row; /* 기본값 : 아이템들이 가로(행) 방향으로 나열 */
+      flex-direction: column; /* 아이템들이 세로(열) 방향으로 나열 */
+      flex-direction: row-reverse; /* 아이템들이 가로(행) 방향으로 역순 나열 */
+      flex-direction: column-reverse; /* 아이템들이 세로(열) 방향으로 역순 나열 */
+      flex-direction: row;
+      gap: 10px; /* 아이템들 사이의 간격(=피그마 오토레이아웃 간격) */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">aaaaaaa</div>
+    <div class="flex_item">bbb</div>
+    <div class="flex_item">cccc</div>
+  </div>
+</body>
+
+</html>

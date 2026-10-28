@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>width height 속성</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* 패딩과 보더를 포함한 크기 계산 */
+    }
+
+    body {
+      padding: 30px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    } 
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    div {
+      margin-bottom: 20px;
+      padding: 16px;
+      border: 1px solid #333;
+    }
+
+    .box1 {
+      background: orange;
+      width: 400px;
+      height: 100px;
+      text-align: center;
+      line-height: 66px;
+      /* 세로 가운데 정렬, box-sizing 포함 */
+    }
+
+    .box2 {
+      background: green;
+      width: 50%;
+      /* 전체 기준 가변(반응형) 너비 지정 */
+      height: 50%;
+      /* 안먹힘 */
+    }
+
+    .box3 {
+      background: rgb(0, 0, 255);
+      height: 80px;
+    }
+
+    .box4 {
+      background: pink;
+      width: 80%;
+      /* 전체 기준 반응형 */
+      height: 1000px;
+    }
+
+    .box4_1 {
+      background: gold;
+      width: 50%;
+      /* 부모 요소 기준 반응형 */
+      height: 50%;
+      /* 부모 요소 기준 반응형 */
+    }
+
+    .vwvh {
+      background: #d9f0ff;
+      width: 50vw;
+      /* 스크롤바 포함 전체 뷰포트 너비 */
+      height: 20vh;
+      /* 뷰포트 높이 기준 */
+    }
+
+    .parent {
+      width: 250px;
+      border: 1px solid #333;
+    }
+
+    .min_content {
+      width: min-content;
+      background: red;
+      /* 최소 콘텐츠 기준 */
+    }
+
+    .max_content {
+      width: max-content;
+      background: blue;
+      /* 최대 콘텐츠 기준, 콘텐츠가 줄바꿈없이 표시될 수 있는 최대 크기 */
+    }
+
+    .fit_content {
+      width: fit-content;
+      background: green;
+      /* 콘텐츠에 맞춰 크기 지정,콘텐츠 크기만큼 너비를 가지되, 부모영역을 넘지않도록 조절 */
+    }
+    .calc {
+      background: yellowgreen;
+      width: calc(100% - 100px);
+      /* 계산식을 사용해 크기를 지정, + - 앞 뒤로 공백 */
+    }
+
+    .clamp {
+      background: lightcoral;
+      width: clamp(300px, 50vw, 800px);
+      /* 🔥중요🔥 최소값, 선호값, 최대값을 함께 지정 */
+    }
+  </style>
+</head>
+
+<body>
+  <h2>width height 속성</h2>
+  <p>실제 콘텐츠 영역의 크기 지정</p>
+  <div class="box1">박스1</div>
+  <div class="box2">박스2</div>
+  <div class="box3"></div>
+  <div class="box4">
+    <div class="box4_1"></div>
+  </div>
+  <div class="vwvh">뷰포트 너비/높이를 기준으로 크기를 지정합니다.</div>
+  <div class="parent">
+    <div class="min_content">Frontend Development Class</div>
+    <div class="max_content">Frontend Development Class</div>
+    <div class="fit_content">Frontend Development Class</div>
+  </div>
+  <div class="calc">calc():계산식을 사용해 크기를 지정합니다.</div>
+  <div class="clamp">clamp():최소값, 선호값, 최대값을 함께 지정합니다.</div>
+</body>
+
+</html>
