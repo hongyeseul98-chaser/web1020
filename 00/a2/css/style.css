@@ -4,6 +4,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 ul {
@@ -29,6 +30,52 @@ a {
 header {
   height: 100px;
   background: #bbb;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  background: #fff;
+}
+
+header nav {
+  width: 70%;
+  background: red;
+  margin-right: 20px;
+  align-self: flex-end;/* 🔥 */
+}
+
+header nav ul.gnb {
+  display: flex;
+}
+
+header nav ul.gnb>li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+/* 반드시 꺾어야함 li 안에 a가 하나 더있기 때문에 */
+header nav ul.gnb>li>a {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* 안꺾어도 됨 */
+header nav ul.gnb>li>ul {
+  position: absolute;
+  width: 100%;
+}
+
+header nav ul.gnb>li>ul>li {
+  height: 36px;
+  line-height: 36px;
+}
+
+header nav ul.gnb>li>ul>li>a {
+  display: block; /* 🔥 */
 }
 
 .img_slide {
@@ -39,9 +86,54 @@ header {
 .contents {
   height: 200px;
   background: #ddd;
+  display: flex;
+}
+
+.contents h2 {
+  font-weight: 400;
+  font-size: 18px;
+  background: #00BB77;
+  padding: 6px 8px;
+  width: 100px;
+  text-align: center;
+  line-height: 1;
+  border-radius: 4px 4px 0 0;
+}
+
+.contents .notice {
+  background: lightgreen;
+  flex: 1.2;
+}
+
+.contents .gal {
+  background: lightblue;
+  flex: 1;
+}
+
+.contents .banner {
+  background: lightcoral;
+  flex: 1;
 }
 
 footer {
   height: 100px;
   background: #bbb;
+  display: flex;
+}
+
+footer .logo {
+  background: red;
+  display: flex;
+  /* 수직 가운데 정렬 */
+  align-items: center;
+}
+
+footer .copy {
+  background: blue;
+  flex: 1;
+}
+
+footer .fam {
+  width: 200px;
+  background: green;
 }
