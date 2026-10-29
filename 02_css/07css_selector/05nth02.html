@@ -8,7 +8,9 @@
   <style>
     :root {
       font-size: 20px;
-      /* 변수 선언 */
+      /* 변수 선언 
+      색 부를때 편함
+      */
       --font-color: #333;
       --point-color1: red;
       --point-color2: blue;
@@ -22,6 +24,53 @@
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    nav ul li {
+      width: 120px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border: 1px solid var(--point-color1);
+    }
+
+    nav ul li:nth-child(2) {
+      background: var(--point-color2);
+    }
+
+    nav ul li:nth-child(even) {
+      /* 짝수 번째 메뉴 */
+      background: var(--point-color3);
+    }
+
+    nav ul li:nth-child(odd) {
+      /* 홀수 번째 메뉴 */
+      background: var(--point-color1);
+    }
+
+    nav ul li:nth-child(2) a {
+      background: pink;
+    }
+
+    nav ul li:first-child {
+      background: lightblue;
+    }
+
+    nav ul li:last-child {
+      background: lightblue;
+    }
+
+    nav ul li:nth-last-child(2) {
+      background: lightcoral;
+    }
+
+    nav ul li:nth-child(5):hover a {
+      /* font-size: 2rem; */
+      background: yellow;
+    }
+
+    nav ul li:nth-child(3):hover {
+      background: lightseagreen;
     }
   </style>
 </head>
