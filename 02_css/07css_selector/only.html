@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상클래스 - only</title>
+  <style>
+    /* :only-child 부모 요소의 자식 요소 중 유일한 요소일 때 스타일 적용
+    잘 안씀.
+    */
+    ul li:only-child {
+      color: red;
+    }
+
+    ul li p:only-of-type {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>내용1</li>
+  </ul>
+  <ul>
+    <li>
+      <p>내용1</p>
+      <p>내용2</p>
+      <span>인라인</span>
+    </li>
+    <li>
+      <p>내용1</p><span>인라인</span>
+    </li>
+    <li>
+      <p>내용1</p><span>인라인</span>
+    </li>
+    <li>
+      <p>내용1</p><span>인라인</span>
+    </li>
+    <li>
+      <p>내용1</p><span>인라인</span>
+    </li>
+  </ul>
+</body>
+
+</html>
