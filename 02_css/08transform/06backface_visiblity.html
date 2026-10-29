@@ -24,7 +24,8 @@
       transition: .6s;
       background: #ccc;
       transform-origin: left center;
-      transform-style: preserve-3d; /* 1번: 3D 변환을 위한 자식 요소의 3D 공간 유지 */
+      transform-style: preserve-3d;
+      /* 1번: 3D 변환을 위한 자식 요소의 3D 공간 유지 */
     }
 
     .container:hover .card {
@@ -48,10 +49,12 @@
     .back {
       background: blue;
       transform: rotateY(180deg);
+      /* 미리 180도 회전시켜서 뒷면을 준비 */
     }
 
     .hidden {
-      backface-visibility: hidden; /* 2번: 뒷면이 보이지 않도록 설정 */
+      backface-visibility: hidden;
+      /* 2번: 뒷면이 보이지 않도록 설정 */
     }
   </style>
 </head>

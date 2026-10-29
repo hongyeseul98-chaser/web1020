@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>translate</title>
+  <!-- 팝업창 만들기: 창 위치 고정 -->
+
+  <style>
+    /* reset */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .modal {
+      position: fixed;
+      /* 화면에 고정 */
+      inset: 0;
+      /* 화면 전체를 덮음 */
+      background: rgba(0, 0, 0, .8);
+    }
+
+    /* 버튼 화면 중앙에 위치시키기 */
+    #closeBtn {
+      width: 50px;
+      height: 50px;
+      background: #fff;
+      position: absolute;
+      /* 부모 내에서, 부모(modal) 기준으로 위치 고정 */
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      /* 가로 중앙에 위치시킬 때 사용, 50%를 왼쪽으로 이동 */
+      cursor: pointer;
+    }
+
+    /* 모달 창 화면 중앙에 위치시키기 */
+    .modal_inner {
+      width: 70%;
+      height: 500px;
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    header {}
+  </style>
+
+</head>
+
+<body>
+  <div class="modal">
+    <button type="button" id="closeBtn">x</button>
+    <div class="modal_inner">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum quibusdam laboriosam ab eos beatae
+      dolor dolorem inventore, error, quos natus exercitationem et excepturi dignissimos odio minus sint labore quod
+      officia tempora ullam voluptatum omnis animi nobis. Delectus distinctio dolorum magnam voluptatem quia, iure ex
+      eligendi suscipit neque! Blanditiis natus, inventore ipsam vero veniam explicabo exercitationem doloremque, quis
+      odit delectus cumque tempora? Excepturi amet veniam repellendus dolorem tenetur vero accusamus optio cum
+      necessitatibus iste facilis molestiae animi magnam minus minima harum ducimus voluptate repellat porro, hic et
+      tempora deleniti vitae! Beatae distinctio quod deserunt omnis illum? Nisi odit corporis quo asperiores excepturi
+      esse? Doloremque amet qui necessitatibus quidem fugit eligendi veritatis fugiat, ipsa voluptas, quia alias eos ab
+      sint impedit dolores! Provident incidunt inventore itaque eum nam excepturi rerum doloribus dolor necessitatibus
+      eos quis molestias vitae nobis, omnis vero perspiciatis, ullam impedit saepe praesentium eveniet repellat magni
+      dignissimos tempora! Et tempora omnis provident sapiente nesciunt possimus nam sequi quibusdam, quaerat dolorem
+      veniam? Accusantium nesciunt nemo, ut impedit laboriosam magnam architecto adipisci, dolorem amet soluta libero
+      repellat quia similique. Dolorem debitis in atque delectus quia a, adipisci amet eos tempore laborum harum non
+      deserunt assumenda, nesciunt tempora est libero. Officiis, laborum? Alias, eius esse, cupiditate aperiam animi
+      dolores dolor a ullam deserunt quod autem? Quidem explicabo est dignissimos a illo repellat numquam eos
+      consectetur animi voluptatum? Veniam odio veritatis obcaecati commodi sapiente tempore iste ab culpa nesciunt
+      architecto quisquam repudiandae, impedit aliquam excepturi vero ratione, et laborum temporibus voluptates quo
+      velit. Nulla, dolore. Minus assumenda illo, repellat sed ratione molestias dolor voluptatibus a corporis et?
+      Deserunt obcaecati culpa quam, ab blanditiis aut atque! Odit eveniet sapiente voluptatem, et deserunt similique.
+      Eius cumque in quis hic ab, veniam iure inventore pariatur natus eveniet necessitatibus. Laboriosam ea
+      perspiciatis fugit beatae voluptatem repellendus expedita!
+    </div>
+  </div>
+
+  <header><a href="#">logo</a></header>
+</body>
+
+</html>

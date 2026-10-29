@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>translate</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      width: 600px;
+      height: 300px;
+      margin: 100px auto;
+      border: 1px solid #000;
+      position: relative;
+      /* 자식 요소의 절대 위치 기준 */
+      perspective: 1600px;
+      /* 3D 변환 시 원근감을 주기 위한 속성 */
+    }
+
+    div p {
+      width: 100%;
+      height: 100%;
+      background: blue;
+      opacity: .3;
+      color: white;
+      font-size: 60px;
+
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: .6s;
+    }
+
+    /* div에 마우스를 올렸을 때, 자식들 중 첫 번째 p */
+    div:hover p:nth-child(1) {
+      transform: translateZ(-500px);
+    }
+
+    div:hover p:nth-child(2) {}
+
+    div:hover p:nth-child(3) {}
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>box1</p>
+    <p>box2</p>
+    <p>box3</p>
+  </div>
+</body>
+
+</html>
