@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scale</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+      width: 640px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul li {
+      width: 200px;
+      height: 150px;
+      overflow: hidden;
+    }
+    ul li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    ul li a img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .6s;
+    }
+
+    ul li:hover a img {
+      transform: scale(2);
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li><a href="#" alt="도경수"><img src="https://img.sportsworldi.com/content/image/2024/04/28/20240428507971.jpg" alt="도경수"></a></li>
+    <li><a href="#" alt="도경수"><img src="https://blog.kakaocdn.net/dna/cgv7pm/btspZEqVn48/AAAAAAAAAAAAAAAAAAAAAI2eRhUtrAkYeQu7mGs4NQOSMvlPw7zlsXKYYnewi-Mb/img.jpg?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1793458799&allow_ip=&allow_referer=&signature=6PfR58ak%2Fjdr8RF9GJsaThzmOyQ%3D" alt="도경수"></a></li>
+    <li><a href="#" alt="도경수"><img src="https://file.sportsseoul.com/news/cms/2023/08/02/news-p.v1.20230802.50009bf55d8c469ab62ea189c1cc3137_P1.jpg" alt="도경수"></a></li>
+  </ul>
+</body>
+
+</html>

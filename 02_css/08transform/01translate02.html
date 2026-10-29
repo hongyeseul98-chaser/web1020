@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>translate</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .modal {
+      position: fixed;
+      background: rgba(0, 0, 0, .8);
+    }
+
+    #closeBtn {
+      background: #fff;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .modal_inner {
+      background: #fff;
+      width: 70%;
+      height: 500px;
+      position: absolute;
+      /* 모달을 화면 중앙에 위치시키기 위해 absolute 사용 
+      absolute는 기준이 되는 부모 요소를 기준으로 위치가 결정됨 */
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      /* left, top, transform 세트임 */
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    header {}
+  </style>
+</head>
+
+<body>
+  <div class="modal">
+    <button type="button" id="closeBtn">x</button>
+    <div class="modal_inner">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga commodi necessitatibus consequatur optio, temporibus
+      magni expedita provident. Voluptate quidem saepe aperiam illum tenetur pariatur numquam fugit, laudantium iste at
+      ipsum cumque iusto. Animi, nesciunt consequuntur iste, totam fuga illum neque nisi quibusdam perferendis nihil,
+      expedita officiis quia dolore dolores asperiores qui facere adipisci quo tempore laboriosam est nemo voluptas nam
+      voluptatum. Veritatis molestias illum optio sit nobis quibusdam incidunt inventore eum atque, sapiente ipsam unde
+      reiciendis, id blanditiis corporis dicta? Obcaecati suscipit temporibus doloremque quia, ullam fugiat animi, nobis
+      quisquam omnis sunt nesciunt reprehenderit quae cumque sed facilis dolorem eum ipsum hic dolore et esse sequi
+      placeat non consequatur! Vero quam praesentium labore commodi autem amet, facilis velit. Necessitatibus, rem
+      eaque! Architecto, amet odit nemo illum ipsum doloremque ab neque, natus excepturi nisi quia debitis, temporibus
+      molestiae aspernatur maxime nobis! Eligendi dolorum quibusdam eaque id commodi. Repellat quasi nobis beatae minus
+      rem maxime dignissimos magni dolorem consequatur reiciendis id eum culpa vero cumque pariatur tenetur nemo alias
+      voluptatibus at ab, sequi repellendus rerum ratione? Delectus corporis magni hic voluptate dolores laudantium
+      necessitatibus animi, odit, vel veritatis natus voluptas quam? Nemo deleniti ullam, repellat exercitationem sunt
+      in molestias eum id blanditiis corrupti sed adipisci, laborum consectetur odio obcaecati assumenda harum est minus
+      distinctio aperiam dicta sit. Rerum adipisci tempore amet temporibus non perferendis ipsum tempora unde. Dolorem
+      reiciendis a, rerum ullam eveniet sunt nulla, modi autem alias magni, porro cumque veniam sint numquam illo fugit
+      quisquam unde aliquam magnam deserunt illum repudiandae impedit et consectetur! Eos corporis asperiores
+      praesentium porro earum aut maiores voluptas dolores! Repellat eveniet, fuga necessitatibus quisquam commodi quod
+      officiis consequatur possimus quis ducimus ipsam voluptatem ipsa tempora! Eligendi odit accusamus tempore
+      aspernatur natus repellendus. Dolore quos saepe est amet voluptatem, recusandae aliquid molestiae iusto laudantium
+      unde odio!
+    </div>
+  </div>
+
+  <header><a href="#">logo</a></header>
+</body>
+
+</html>
