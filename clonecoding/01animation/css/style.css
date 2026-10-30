@@ -93,7 +93,6 @@ h1 {
 section {
   width: 1000px;
   height: 400px;
-  background: #ccc;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -104,6 +103,163 @@ section img {
   position: absolute;
 }
 
-.sky .sun {}
-.sky .cloud1 {}
-.sky .cloud2 {}
+.sky .sun {
+  top: -150px;
+  left: 50%;
+  margin-left: -110px;
+  transform-origin: center 500px;
+  animation: sunAni 20s infinite linear;
+}
+
+@keyframes sunAni {
+  0% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+
+  25% {
+    transform: rotate(-30deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  75% {
+    transform: rotate(30deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(-90deg);
+    opacity: 0;
+  }
+}
+
+
+.sky .cloud1 {
+  left: 10%;
+  top: -30px;
+  animation: flow 10s infinite linear;
+}
+
+.sky .cloud2 {
+  left: 0;
+  top: 20px;
+  animation: flow 20s infinite linear;
+}
+
+@keyframes flow {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    left: 90%;
+  }
+}
+
+.orbit {
+  bottom: 104px;
+  left: 50%;
+  margin-left: -165px;
+  opacity: .7;
+  animation: rotate 20s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+    opacity: .7;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.town_night {
+  bottom: 0;
+  left: 40px;
+}
+
+.town_day {
+  bottom: 0;
+  left: 40px;
+  animation: dayAni 20s infinite linear;
+}
+
+@keyframes dayAni {
+  0% {
+    opacity: .8;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 
+@keyframes dayAni {
+  0% {
+
+    opacity: .8;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+.man {
+  left: 0;
+  bottom: 0;
+  animation: flow 7s infinite linear;
+}
+
+.family {
+  left: 0;
+  bottom: 0;
+  animation: flow 20s infinite linear;
+
+}
