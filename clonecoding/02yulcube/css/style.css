@@ -23,6 +23,7 @@
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -87,6 +88,7 @@ body {
   transform-style: preserve-3d;
   animation: cube_rotate 34s linear infinite; 
   /* 자식 요소들이 3D 공간에서 변형되도록 설정 */
+  /* 잠시 숨김 처리 */
 }
 
 @keyframes cube_rotate {
@@ -105,8 +107,8 @@ body {
   outline: 0;
   backface-visibility: hidden;
   /* 뒤쪽 면이 보이지 않도록 설정 */
-  display: none;
-  /* 잠시 숨김 */
+  /* display: none; */
+  /* 잠시 숨김 처리*/
 
 }
 
@@ -572,11 +574,8 @@ body {
   padding: 160px 34px 34px;
 }
 
-/* #circle article.face_8 {
-  display: block;
- } 
-*/
-/* 잠시 블록 처리 */
+/* #circle article.face_1 {display: block;} */
+/* 잠시 숨김 블록 처리 */
 
 
 /* 3D 큐브의 각 면을 회전시키고 Z축으로 이동시켜 배치*/
