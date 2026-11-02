@@ -85,7 +85,7 @@ body {
   margin-left: -300px;
   margin-top: -400px;
   transform-style: preserve-3d;
-  /* animation: cube_rotate 2s linear infinite; 잠시 주석 처리 */
+  animation: cube_rotate 34s linear infinite; 
   /* 자식 요소들이 3D 공간에서 변형되도록 설정 */
 }
 
@@ -284,6 +284,7 @@ body {
 }
 
 
+/* 공통 */
 .face_2 .panel_card,
 .face_4 .panel_card,
 .face_5 .panel_card,
@@ -328,6 +329,8 @@ body {
   line-height: 1.65;
 }
 
+
+/* face_2 */
 .shift_card strong {
   position: relative;
   z-index: 2;
@@ -337,6 +340,8 @@ body {
   font-size: 18px;
 }
 
+
+/* face_3 */
 .direction_layout {
   display: flex;
   flex-direction: column;
@@ -364,6 +369,8 @@ body {
   flex: .8;
 }
 
+
+/* face_4 */
 .system_card {
   display: flex;
   flex-direction: column;
@@ -399,6 +406,8 @@ body {
   color: var(--color_mint);
 }
 
+
+/* face_5 */
 .hero_card {
   position: relative;
   z-index: 2;
@@ -429,7 +438,6 @@ body {
     radial-gradient(circle at 50% 42%, transparent, rgba(0, 0, 0, 0.58) 70%);
 }
 
-
 .hero_copy {
   position: relative;
   z-index: 2;
@@ -451,7 +459,6 @@ body {
   line-height: 1.35;
 
 }
-
 
 .formula_bar {
   display: flex;
@@ -486,6 +493,8 @@ body {
   font-style: normal;
 }
 
+
+/* face_6 */
 .beyond {
   display: flex;
   flex-direction: column;
@@ -524,14 +533,54 @@ body {
     var(--color_panel_strong);
 }
 
-#circle article.face_7 {
-  display: block;
-  /* 잠시 블록 처리 */
+/* face_7 */
+.tag_group {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
 }
 
+.tag_group span {
+  border: 1px solid rgba(157, 255, 236, 0.2);
+  padding: 10px 13px;
+  color: #defef7;
+  background: rgba(0, 0, 0, 0.28);
+  font: 700 12px/1 var(--eng-font1);
+}
 
-/* 3D 큐브의 각 면을 회전시키고 Z축으로 이동시켜 배치,  */
-/* .face_1 {
+/* face_8 */
+.face_8 .claim_card {
+  padding: 0;
+}
+
+.brand_video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .72;
+}
+
+.claim_overlay {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background: linear-gradient(180deg, transparent,rgba(0,0,0,.92) 44%);
+  padding: 160px 34px 34px;
+}
+
+/* #circle article.face_8 {
+  display: block;
+ } 
+*/
+/* 잠시 블록 처리 */
+
+
+/* 3D 큐브의 각 면을 회전시키고 Z축으로 이동시켜 배치*/
+.face_1 {
   transform: rotateY(0deg) translateZ(-764px);
 }
 .face_2 {
@@ -554,4 +603,4 @@ body {
 }
 .face_8 {
   transform: rotateY(315deg) translateZ(-764px);
-} */
+}
