@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+
+<body>
+  <div id="result"></div>
+  <script>
+    /*
+      국어, 영어, 수학 점수를 prompt로 받아와서 -변수3개
+      토탈 -변수, 더하는놈
+      평균 - 변수, 토탈을 3으로 나눔
+      학점 - 변수, else if 안에서 작성 ,선언만
+
+      평균이 90점 이상이면 A
+      80점 이상이면 B
+      70점 이상이면 C
+      60점 이상이면 D
+      그외는 F         -를 학점에 집어넣음
+      "당신의 학점은      입니다"  >를 result 에 뜨게 만들어라 
+  */
+    const num1 = Number(prompt('국어 점수를 입력하세요'));
+    const num2 = Number(prompt('영어 점수를 입력하세요'));
+    const num3 = Number(prompt('수학 점수를 입력하세요'));
+
+    const tot = num1 + num2 + num3; // = Number(num1) + Number(num2) + Number(num3);
+    const average = tot / 3;
+    let score;
+
+    if (average >= 90) {
+      score = 'A';
+    } else if (score >= 80) {
+      score = 'B';
+    } else if (score >= 70) {
+      score = 'C';
+    } else if (score >= 60) {
+      score = 'D';
+    } else {
+      score = 'F';
+    }
+
+    document.querySelector('#result').innerHTML = `당신의 학점은 ${score}입니다`;
+
+  </script>
+</body>
+
+</html>
