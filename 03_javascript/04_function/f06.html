@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>즉시 실행 함수</title>
+</head>
+
+<body>
+  <script>
+    (function () {
+      life();
+    })(); //콜을 바로 함
+
+    function life() {
+      console.log('즉시실행함수1');
+    }
+
+    let instance = (function (a, b) {
+      console.log('즉시실행함수2: ' + a + b);
+      return a + b;
+    })(1,2);
+
+    console.log(instance);
+
+  </script>
+</body>
+
+</html>
