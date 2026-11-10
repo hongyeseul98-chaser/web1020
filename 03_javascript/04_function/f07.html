@@ -9,17 +9,19 @@
 
 <body>
   <script>
-    const doAddition = (s1, s2) => s1 + s2; //{}괄호 x, 괄호 없을 경우 return 을 꼭 넣어야함
+    const doAddition = (s1, s2) => s1 + s2; //{}중괄호 x, return 생략 가능
     console.log(doAddition(2, 5));
 
 
+    // 중괄호{} 사용 시 return 필요
+    // 중괄호를 사용하면 함수 본문이 여러 줄이 될 수 있으므로 명시적으로 return을 작성해야 함
     const doAddition2 = (s1, s2) => {
       let result = (s1 + s2) / 2;
       return result;
     }
     console.log(doAddition2(4, 6));
 
-
+    // 매개변수가 하나일 경우 소괄호() 생략 가능
     const num = n => n + 1;
     console.log(num(2));
   </script>

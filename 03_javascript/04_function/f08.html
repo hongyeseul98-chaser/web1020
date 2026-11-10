@@ -9,14 +9,18 @@
 
 <body>
   <script>
+    //() 소괄호 안에 매개변수와 기본값을 설정할 수 있음
+    // multi 함수는 n1, n2, n3 매개변수를 받아 n1 * n2 + n3를 반환하며, n2와 n3는 기본값이 설정되어 있음
     let multi = (n1, n2 = 5, n3 = 10) => {
       return (n1 * n2) + n3;
     }
+
+    // multi 함수를 호출하여 결과를 확인
     let result = multi(5, 10, 20);
     console.log(result);
-    console.log(multi(10, 20)); //n3=10 기본값 사용
+    console.log(multi(10, 20)); //생략된 n3 매개변수는 기본값 n3=10 사용
 
-    result = multi(30);//n2 = 5, n3 = 10 기본값 사용
+    result = multi(30);//생략된 n2, n3 매개변수는 각각 기본값 n2=5, n3=10 사용
     document.write(result);
   </script>
 </body>
