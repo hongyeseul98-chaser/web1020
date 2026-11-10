@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체 알아보기</title>
+</head>
+
+<body>
+  <script>
+    /*
+    프로그램에서 인식할 수 있는 모든 대상이며 ,데이터를     저장하고 처리하는 기본 단위
+    배열도 사실은 Array라는 특별한 객체(Object)
+    */
+
+    let obj = {
+      name: '홍길동',
+      age: 20,
+      play: true,
+      design: function () {
+        return '감각적이고 똘똘한'
+      },
+      speed: 100,
+    }
+    console.log(obj['name']);//대괄호 표기법
+    console.log(obj.age);//점 표기법
+    console.log(obj.play);
+    console.log(obj.design());//메서드 호출
+    //즉 console.log도 매서드이다 log()라는 메서드를 호출하는 것
+    console.log(obj.speed);
+
+    let arr = [1, '율쌤', true, [1, 2, 3], { name: '홍길동2', age: 18 }, '졸려요'];
+    let obj2 = {
+      name: '율쌤',
+      age: 18,
+      disign: () => '구조적이고 모던한',
+      speed: 100,
+      // upSpeed: function(up) { //up이라는 매개변수를 받아서 speed를 증가시키는 메서드
+      //   return this.speed + up
+      // },
+      //upSpeed:(up) => this.speed + up, //this는 화살표 함수에서는 obj2를 가리키지 않음, 화살표함수를 사용할 때에는 obj2를 직접 참조해야 함
+      upSpeed:(up) => obj2.speed + up,
+      
+
+    }
+    console.log(obj2.upSpeed(100));
+  </script>
+</body>
+
+</html>
