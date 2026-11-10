@@ -9,16 +9,23 @@
 
 <body>
   <script>
-    const text1 = '함수 선언 전 호출';
+    const text1 = '함수 선언 전 호출';  
     const text2 = '함수 선언 후 호출';
+    //함수 ( 선언문 )은 전체가 호이스팅 되므로 선언 전에도 호출 가능
+
+    //선언 전 호출
     printMsg(text1);
 
+
+    //함수선언
     function printMsg(msg) {
       document.write(`함수 호출 메시지 : ${msg}<br>`);
     }
 
+    //선언 후 호출
     printMsg(text2);
     printMsg('불러보자');
+
 
   </script>
 </body>

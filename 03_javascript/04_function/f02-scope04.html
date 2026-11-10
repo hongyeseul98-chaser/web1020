@@ -18,23 +18,24 @@
       console.log(`sumVar1 함수 내부 result1 : ${result1}`);
       console.log(`sumVar1 함수 내부 i : ${i}`);
     }
-
     sumVar1();
+
 
     let n2 = 100; //전역변수F
     function sumLet() {
-      let n2 = 10; //지역변수
-      let result2 = 0;
+      let n2 = 10; //지역변수, 함수 내부에서 다시 주어진 값으로 
+      let result2 = 0; 
       for (let z = 1; z <= n2; z++) {
         result2 += z;
       }
       console.log(`sumLet 함수 내부 result2 : ${result2}`);
-      //console.log(z);
+      //console.log(z); 
     }
     sumLet();
 
+
     console.log(n2);
-    //console.log(i); //함수 스코프
+    //console.log(i); //함수 스코프 
 
   </script>
 </body>

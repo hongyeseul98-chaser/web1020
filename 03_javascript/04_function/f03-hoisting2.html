@@ -9,12 +9,15 @@
   <script>
     const text1 = '함수 선언 전 호출 에러';
     const text2 = '함수 선언 후 호출만 가능';
-    //printMsg(text1); //못부름
+    //( 익명함수 )는 선언 전 호출 불가능
+    //printMsg(text1); 
 
+    //익명함수
     let printMsg = function(msg){
       console.log(`함수 호출 메시지 : ${msg}`);
     }
 
+    //선언 후 호출만 가능
     printMsg(text2);
 
 
