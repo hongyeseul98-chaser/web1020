@@ -576,16 +576,36 @@ main .more.border:hover {
   width: 320px;
 }
 
-.article_bottom .box .txt b {
+.article_bottom .box .txt_b {
   position: absolute;
   left: 40px;
   bottom: 40px;
   transition: .6s;
+  transform: translateY(102px);
 }
 
-.article_bottom .box .txt b span {}
+.article_bottom .box3 .txt_b {
+  transform: translateY(0);
+}
 
-.article_bottom .box .txt b a.more {}
+.article_bottom .box:hover .txt_b {
+  transform: translateY(0);
+}
+
+.article_bottom .box .txt_b span {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.article_bottom .box .txt_b a.more {
+  height: 56px;
+  font-size: 16px;
+  color: var(--gray-08);
+  margin-top: 16px;
+  /*  */
+  /*  */
+}
 
 
 .article_bottom .more {
@@ -600,27 +620,23 @@ main .more.border:hover {
 
 .article_bottom .box1 {
   flex: 1;
+  background:
+    linear-gradient(180deg, rgba(23, 36, 59, .18) 0%, rgba(23, 36, 59, .68) 100%),
+    url(../img/yul-info-channel.png) center/cover;
+  color: var(--gray-00);
+  transition: .3s;
 }
 
-.article_bottom .box2 {
-  flex: 2;
+.article_bottom .box1:hover {
+  flex: 1.5;
 }
 
-.article_bottom .box3 {
-  flex: 1;
-}
-
-.article_bottom .box4 {
-  flex: 1;
-}
-
-.article_bottom .box5 {
-  flex: 2;
+.article_bottom .box1 p {
+  font-size: 70px;
 }
 
 .article_bottom .box_all {
   flex: 3;
-  background: pink;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -629,9 +645,77 @@ main .more.border:hover {
 .article_bottom .box_all>div {
   flex: 1;
   width: 100%;
-  background: #ccc;
   display: flex;
   gap: 20px;
+}
+
+.article_bottom .box2 {
+  flex: 2;
+  background: var(--yul-brand-orange);
+  color: var(--gray-00);
+}
+
+.article_bottom .box2 img {
+  width: 340px;
+  top: 0;
+  right: 80px;
+  transition: .3s;
+}
+
+.article_bottom .box2:hover img {
+  right: 30px;
+}
+
+.article_bottom .box3 {
+  flex: 1;
+  background: var(--yul-brand-orange-soft);
+  transition: .3s;
+}
+
+
+.article_bottom .box3:hover {
+  flex: 1.5 0 0;
+}
+
+.article_bottom .box3 img {
+  right: 20px;
+  bottom: -50px;
+  width: 200px;
+  transition: .3s;
+}
+
+.article_bottom .box3:hover img {
+  right: 0;
+  bottom: 0;
+}
+
+
+.article_bottom .box4 {
+  flex: 1;
+  background: var(--yul-brand-yellow-soft);
+  transition: .3s;
+}
+
+.article_bottom .box4:hover {
+  flex: 1.5 0 0;
+}
+
+.article_bottom .box5 {
+  flex: 2;
+  background: var(--yul-brand-yellow);
+}
+
+.article_bottom .box5 img{
+  right: 70px;
+  bottom: 0;
+  width: 330px;
+  transition: .3s;
+  transform: translateY(30px);
+
+}
+.article_bottom .box5:hover img{
+  right: 40px;
+  transform: translateY(0);
 }
 
 .motion {
