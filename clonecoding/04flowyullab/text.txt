@@ -26,21 +26,7 @@ HTML · CSS · JavaScript 기초부터
 
 arrow_forward
 
-Education
-디자인에서 AI 코딩까지
-실무 흐름을 배우는 곳
-FlowYulLab은 UI/UX, 웹디자인, 프론트엔드,
-AI 코딩을 쉽게 풀어주는 교육 브랜드입니다.
-유튜브 강의 보기
 
-arrow_forward
-
-Design
-UI/UX 기획부터
-Figma 실습까지
-디자인의 흐름을 이해하고
-실제 화면을 만드는 법을 배웁니다.
-학습 트랙 보기
 
 arrow_forward
 ←

@@ -301,6 +301,7 @@ header .container .all_con ul.list>li button {
   display: flex;
   position: relative;
 }
+
 header .container .all_con ul.list>li button::before {
   content: '';
   display: inline-block;
@@ -313,6 +314,7 @@ header .container .all_con ul.list>li button::before {
   z-index: -1;
   transition: .3s;
 }
+
 header .container .all_con ul.list>li:hover button::before {
   width: 100%;
 }
@@ -322,7 +324,8 @@ header .container .all_con ul.list>li ul {
   line-height: 2.4;
   font-size: 16px;
 }
-header .container .all_con ul.list>li:hover ul a{
+
+header .container .all_con ul.list>li:hover ul a {
   color: var(--yul-brand-amber);
 }
 
@@ -350,6 +353,30 @@ main {
   width: 100%;
 }
 
+main .more {
+  display: flex;
+  height: 72px;
+  gap: 10px;
+  padding: 10px 32px;
+  border-radius: 36px;
+  background: var(--gray-00);
+  color: var(--yul-brand-ink);
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .more.border {
+  background: transparent;
+  color: var(--gray-00);
+  border: 1px solid var(--gray-00);
+  transition: .3s;
+}
+
+main .more.border:hover {
+  background: var(--gray-00);
+  color: var(--yul-brand-ink);
+}
+
 .main_visual {
   height: 100vh;
   background: #ccc;
@@ -359,36 +386,116 @@ main {
 .main_visual .inner {
   height: 100%;
   background: red;
+  display: flex;
+  flex-direction: column;
 }
 
-.info {
-  padding: 80px 0 100px;
-}
-
-.article_top {
-  height: 140px;
-  background: var(--gray-02);
-  border-radius: 100px;
-}
-
-.article_bottom {
-  height: 900px;
-  margin-top: 100px;
-  background: blue;
-}
-
-.motion {
+.main_visual .swiper {
+  flex: 1;
   width: 100%;
+  border-radius: var(--round);
+  background: red;
+}
+
+.main_visual .swiper li {
   position: relative;
-  overflow: hidden;
-}
+  display: flex;
+  align-items: flex-end;
+  background: no-repeat center/cover url(../img/yul-main-hero-ai-coding.png);
 
-.motion .inner {
-  height: 1000px;
-  background: #ccc;
-}
+  .main_visual .swiper li.slide1 {
+    background-image: url(../img/yul-main-hero-education.png);
+  }
 
-footer {
-  height: 400px;
-  background: #32E0BD;
-}
+  .main_visual .swiper li.slide2 {
+    background-image: url(../img/yul-main-hero-design.png);
+  }
+
+  .main_visual .swiper li.slide3 {
+    background-image: url(../img/yul-main-hero-ai-coding.png);
+  }
+
+  .main_visual .swiper li.slide4 {
+    background-image: url(../img/yul-main-hero-publishing.png);
+  }
+
+  .main_visual .swiper li .txt_area {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    padding: 100px 0 100px 100px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    color: var(--gray-00);
+    text-shadow: 0 3px 24px rgba(59, 46, 23, 0.72);
+  }
+
+  .sub_txt {
+    color: var(--gray-02);
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 600;
+  }
+
+  .txt_area .tit {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: 32px 0 38px;
+  }
+
+  .txt_area .txt {
+    color: var(--gray-02);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.3;
+    opacity: .9;
+  }
+
+  .txt_area .more {
+    margin-top: auto;
+  }
+
+  .main_visual .pager {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    background: lightcoral;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  .info {
+    padding: 80px 0 100px;
+  }
+
+  .article_top {
+    height: 140px;
+    background: var(--gray-02);
+    border-radius: 100px;
+  }
+
+  .article_bottom {
+    height: 900px;
+    margin-top: 100px;
+    background: blue;
+  }
+
+  .motion {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .motion .inner {
+    height: 1000px;
+    background: #ccc;
+  }
+
+  footer {
+    height: 400px;
+    background: #32E0BD;
+  }
