@@ -74,3 +74,54 @@ const infoSlide = new Swiper('.article_top .slide .swiper ', {
   },
 
 });
+
+//contents 영역의 가로 자동 슬라이드
+const contentsSlide = new Swiper('.contents .swiper', {
+  //카드 너비는 css에 맡기고 보이는 만큼 자동으로 보여줌
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+
+  loop: true,
+  loopAdditionalSlides: 5,
+  speed: 9000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  on: {
+    //계속 같은 속도로 흐르게 linear 를 적용
+    init: function () {
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    },
+    
+    slideChangeTransitionStart: function () {
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    },
+  },
+});
+
+
+//blog 영역의 가로 자동 슬라이드
+const blogSlide = new Swiper('.blog .swiper', {
+  //카드 너비는 css에 맡기고 보이는 만큼 자동으로 보여줌
+  slidesPerView: 'auto',
+  spaceBetween: 30,
+
+  loop: true,
+  loopAdditionalSlides: 5,
+  speed: 12000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  on: {
+    //계속 같은 속도로 흐르게 linear 를 적용
+    init: function () {
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    },
+    
+    slideChangeTransitionStart: function () {
+      this.wrapperEl.style.transitionTimingFunction = 'linear';
+    },
+  },
+});
