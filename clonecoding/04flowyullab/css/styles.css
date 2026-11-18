@@ -727,7 +727,229 @@ main .more.border:hover {
 
 .motion .inner {
   height: 1000px;
-  background: #ccc;
+  display: flex;
+  align-items: center;
+
+}
+
+.motion .tit b {
+  font-family: var(--font-Eng2);
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--yul-brand-navy);
+}
+
+.motion .tit h2 {
+  font-family: var(--font-Eng2);
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--yul-brand-orange);
+  margin-bottom: 60px;
+}
+
+.motion .tit p {
+  font-size: 36px;
+  line-height: 1.3;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+}
+
+.motion .tit p span {
+  display: block;
+  font-weight: 500;
+}
+
+.motion .circle_box {
+  position: absolute;
+  width: 1100px;
+  height: 1100px;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, var(--yul-brand-yellow, #F6C84F) 0%, var(--yul-brand-orange-deep, #C8671E) 100%);
+  right: 0;
+  top: 65%;
+  animation: rotateCircle 7s infinite linear;
+  transform-origin: 55% 50%;
+}
+
+.motion .circle_box .circle1 {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, var(--yul-brand-yellow, #F6C84F) 0%, var(--yul-brand-orange-deep, #C8671E) 100%);
+  left: 50%;
+  top: 50%;
+  margin-left: -40%;
+  margin-top: -40%;
+  animation: rotateCircle 7s infinite linear;
+  transform-origin: 45% 50%;
+
+}
+
+.motion .circle_box .circle2 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, var(--yul-brand-yellow, #F6C84F) 0%, var(--yul-brand-orange-deep, #C8671E) 100%);
+  left: 50%;
+  top: 50%;
+  margin-left: -25%;
+  margin-top: -25%;
+  animation: rotateCircle 7s infinite linear;
+  transform-origin: 35% 50%;
+
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* learning */
+.learning {
+  padding: 100px 0;
+}
+
+.tit_eng {
+  margin-bottom: 40px;
+  color: var(--gray-09);
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.learning ul {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  gap: 20px;
+}
+
+.learning ul li {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  padding: 34px;
+  border-radius: var(--round);
+  background-color: var(--yul-brand-orange);
+  transition: flex .3s;
+  color: var(--gray-00);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.learning ul li:hover {
+  flex: 3;
+}
+
+.learning ul li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.learning ul li:hover img {
+  opacity: .2;
+}
+
+.learning ul li h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem;
+  transform: rotate(90deg) translateY(-20px);
+  transform-origin: left center;
+}
+
+.learning ul li:hover h3 {
+  transform: rotate(0) translateY(0);
+}
+
+.learning ul li .txt {
+  position: relative;
+  font-size: 16px;
+  display: none;
+}
+
+.learning ul li:hover .txt {
+  display: block;
+}
+
+.learning ul li .txt em {
+  display: block;
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.learning ul li .txt p {
+  margin-bottom: 80px;
+  line-height: 1.6;
+  font-weight: 200;
+}
+
+.learning ul li .txt a {
+  width: auto;
+  height: 60px;
+  display: inline-flex;
+}
+
+
+.learning ul li::after {
+  content: '+';
+  display: flex;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--gray-00);
+  border-radius: 50%;
+  font-weight: 100;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-bottom: 6px;
+  align-self: flex-end;
+}
+
+.learning ul li:hover::after {
+  display: none;
+}
+
+.con {
+  padding: 120px 0 0;
+  background: var(--gray-01);
+}
+
+.con .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  margin-bottom: 42px;
+}
+
+.con .tit_eng {
+  margin-bottom: 0;
+}
+.con .inner a.more {
+  width: 160px;
+  height: 56px;
+  border: 1px solid var(--gray-02);
+  transition: .2s;
+}
+.con .inner a.more:hover {
+  border-color: var(--gray-03);
 }
 
 footer {
