@@ -1141,6 +1141,80 @@ main .more.border:hover {
   background-color: var(--gray-01);
 }
 
+.contact .inner {
+  height: 200px;
+  display: flex;
+  gap: 20px;
+}
+
+.contact .inner article {
+  padding: 46px 36px;
+  background: var(--gray-00);
+  border-radius: var(--round);
+  flex: 1;
+  box-shadow: var(--yul-brand-shadow2);
+  transition: background-color .4s;
+}
+
+.contact .inner article:hover{
+  background-color: var(--yul-brand-orange);
+  color: var(--gray-00);
+}
+.contact .inner article a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 96px;
+  transition: .3s;
+}
+
+.contact .inner article:nth-child(1) a {
+  background-image: url('../img/yul-contact-01.png');
+}
+
+.contact .inner article:nth-child(2) a {
+  background-image: url('../img/yul-contact-02.png');
+}
+
+.contact .inner article:nth-child(3) a {
+  background-image: url('../img/yul-contact-03.png');
+}
+
+.contact .inner article:nth-child(4) a {
+  background-image: url('../img/yul-contact-04.png');
+}
+
+.contact .inner article:nth-child(1):hover a {
+  background-image: url('../img/yul-contact-01-hover.png');
+}
+
+.contact .inner article:nth-child(2):hover a {
+  background-image: url('../img/yul-contact-02-hover.png');
+}
+
+.contact .inner article:nth-child(3):hover a {
+  background-image: url('../img/yul-contact-03-hover.png');
+}
+
+.contact .inner article:nth-child(4):hover a {
+  background-image: url('../img/yul-contact-04-hover.png');
+}
+
+.contact .inner article h3 {
+  font-size: 32px;
+  color: var(--yul-brand-ink);
+  font-weight: 700;
+  margin-bottom: 0.9em;
+  
+}
+.contact .inner article:hover h3 {
+  color: var(--gray-00);
+}
+.contact .inner article p{
+  line-height: 1.33;
+}
 
 /* footer */
 footer {
