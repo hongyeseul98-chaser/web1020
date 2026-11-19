@@ -1,1 +1,7 @@
 @charset "UTF-8";
+
+@media screen and (max-width: 1640px) {
+  .inner{
+    width: min(1600px, calc(100% - 40px));
+  }
+}

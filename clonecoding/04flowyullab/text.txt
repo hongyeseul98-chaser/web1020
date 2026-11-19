@@ -267,7 +267,6 @@ Blog
 article
 smart_display
 유관 채널
-keyboard_arrow_up
 유튜브 채널
 GitHub
 Blog
@@ -275,7 +274,6 @@ top
 arrow_upward
 
 브랜드 정보 및 문의
-
 온라인 채널 기반 운영
 문의 채널은 유튜브와 블로그에서 안내합니다.
 브랜드명 FlowYulLab / 플로율랩
