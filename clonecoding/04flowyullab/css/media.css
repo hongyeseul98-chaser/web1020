@@ -132,11 +132,14 @@
     background: transparent;
     position: relative;
     order: 3;
-    transform: rotate(90deg);
+    transform: rotate(90deg) scaleY(1.4);
     font-weight: 100;
+    width: auto;
+    font-family: var(--font-Eng2);
   }
+
   header .container .all_con ul.list>li.on button::before {
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) scaleY(1.4);
   }
 
 
@@ -156,4 +159,262 @@
   }
 
 
+  /* main_visual */
+  .txt_area .tit {
+    font-size: 42px;
+  }
+
+  .article_bottom {
+    height: auto;
+    display: block;
+    padding-inline: 20px;
+  }
+
+  .article_bottom .box {
+    margin-bottom: 20px;
+    height: 180px;
+    padding: 36px;
+  }
+
+  .article_bottom .box em {
+    font-size: 16px;
+  }
+
+  .article_bottom .box p {
+    font-size: 40px;
+    width: 180px;
+  }
+
+  .article_bottom .box .txt_b {
+    left: 36px;
+  }
+
+  .article_bottom .box:hover .txt_b {
+    transform: translateY(102px);
+  }
+
+  .article_bottom .box3:hover .txt_b {
+    transform: translateY(0);
+  }
+
+  .article_bottom .box .txt_b span {
+    font-size: 12px;
+  }
+
+  .article_bottom .box1 {
+    height: 310px;
+    flex-basis: auto;
+  }
+
+  .article_bottom .box1:hover {
+    flex: 1 auto;
+  }
+
+  .article_bottom .box_all {
+    display: block;
+  }
+
+  .article_bottom .box_all>div {
+    display: block;
+    height: auto;
+  }
+
+  .article_bottom .box2 img {
+    width: 156px;
+    right: 30px;
+  }
+
+  .article_bottom .box3 {
+    width: calc(50% - 10px);
+    float: left;
+  }
+
+  .article_bottom .box3 img {
+    display: none;
+  }
+
+  .article_bottom .box4 {
+    width: calc(50% - 10px);
+    float: right;
+  }
+
+  .article_bottom .box5 {
+    clear: both;
+  }
+
+
+  .article_bottom .box5 img {
+    right: 40px;
+    transform: translateY(0);
+    width: 150px;
+  }
+
+  .motion {
+    display: none;
+  }
+
+  .tit_eng {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+
+  .learning {
+    padding: 0 0 56px;
+  }
+
+  .learning ul {
+    display: block;
+    height: auto;
+  }
+
+  .learning ul li {
+    height: 110px;
+    margin-bottom: 20px;
+  }
+
+  .learning ul li:hover img {
+    opacity: 1;
+  }
+
+  .learning ul li h3 {
+    transform: rotate(0) translateY(0);
+  }
+
+  .learning ul li:hover .txt,
+  .learning ul li .txt a,
+  .learning ul li::after {
+    display: none;
+  }
+
+  .con {
+    padding: 0;
+  }
+
+  .con .inner {
+    padding-inline: 20px;
+    height: 32px;
+    margin-bottom: 20px;
+  }
+
+  .con .inner a.more {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+
+  .con .inner a.more em {
+    display: none;
+  }
+
+  .contents {
+    padding-top: 70px;
+  }
+
+  .contents .swiper {
+    height: 380px;
+    padding-bottom: 50px;
+  }
+
+  .contents .swiper .box {
+    width: 320px;
+  }
+
+
+  .contents .swiper .box .txt_box em {
+    font-size: 14px;
+  }
+
+  .contents .swiper .box .txt_box p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contents .swiper .box .txt_box span {
+    font-size: 13px;
+  }
+
+  .blog .swiper {
+    height: 360px;
+    padding-bottom: 50px;
+  }
+
+  .blog .swiper .box {
+    width: 320px;
+  }
+
+  .blog .swiper .box .img_box {
+    height: 184px;
+    flex-shrink: 0;
+  }
+
+  .blog .swiper .box .txt_box {
+    padding: 24px;
+  }
+
+  .blog .swiper .box .txt_box em {
+    font-size: 14px;
+  }
+
+  .blog .swiper .box .txt_box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .blog .swiper .box .txt_box span {
+    font-size: 13px;
+  }
+
+
+  .curriculum {
+    padding-inline: 20px;
+    padding-top: 30px;
+  }
+
+  .curriculum .inner {
+    position: relative;
+  }
+
+  .curriculum .inner a .txt_box {
+    width: 70%;
+  }
+
+  .curriculum span {
+    font-size: 12px;
+  }
+
+  .curriculum .list_box {
+    width: 300px;
+    height: 100%;
+  }
+
+  .contact .inner {
+    height: auto;
+    flex-direction: column;
+    padding-inline: 20px;
+  }
+
+  .contact .inner article {
+    padding: 32px;
+    flex-basis: 124px;
+  }
+
+  .contact .inner article a {
+    background-size: 54px;
+  }
+
+  .contact .inner article h3 {
+    font-size: 18px;
+  }
+    .contact .inner article p {
+    font-size: 14px;
+  }
 }
