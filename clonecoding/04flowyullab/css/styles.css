@@ -132,7 +132,7 @@ header .inner {
   align-items: center;
 }
 
-header.on nav {
+ navheader.on {
   display: none;
 }
 
@@ -272,8 +272,8 @@ header.on .ham_menu {
 }
 
 header .container {
-  width: 100%;
-  max-width: 1300px;
+  width: min(1280px, calc(100% - 40px));
+  /* max-width: 1300px; */
   /* 컨테이너가 1300이하일 경우 100% */
   margin: 0 auto;
 }
@@ -744,6 +744,8 @@ main .more.border:hover {
   height: 1000px;
   display: flex;
   align-items: center;
+  z-index: 3;
+  position: relative;
 
 }
 
