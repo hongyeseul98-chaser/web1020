@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 @media screen and (max-width: 1640px) {
   .inner {
     width: min(1600px, calc(100% - 40px));
@@ -58,7 +57,7 @@
   }
 
   footer .f_bottom {
-    margin-top: 0;
+    margin-top: 40px;
   }
 }
 
@@ -118,11 +117,6 @@
   header .container .all_con ul.list>li:last-child {
     border: 0;
   }
-  header .container .all_con ul.list>li.on button {
-    display: block;
-    padding: 1vw 20px 2vw;
-    border-bottom: 1px solid var(--gray-00);
-  }
 
   header .container .all_con ul.list>li button {
     font-size: 22px;
@@ -131,6 +125,10 @@
     line-height: 3.3;
     justify-content: space-between;
     padding-inline: 20px;
+  }
+
+  header .container .all_con ul.list>li.on button {
+    border-bottom-color: transparent;
   }
 
   header .container .all_con ul.list>li button::before {
@@ -162,13 +160,13 @@
 
   header .container .all_con ul.list>li.on ul {
     display: block;
-    padding: 3vw 3vw 1vw;
+    padding: 1vw 20px 2vw;
+    border-bottom: 1px solid var(--gray-06);
   }
 
 
   /* main_visual */
   .main_visual {
-
     padding-top: 64px;
   }
 
@@ -176,6 +174,7 @@
     font-size: 42px;
   }
 
+  /* article_bottom */
   .article_bottom {
     height: auto;
     display: block;
@@ -270,6 +269,7 @@
     font-size: 28px;
   }
 
+  /* learning */
   .learning {
     padding: 0 0 56px;
   }
@@ -292,12 +292,13 @@
     transform: rotate(0) translateY(0);
   }
 
-  .learning ul li:hover .txt,
   .learning ul li .txt a,
-  .learning ul li::after {
+  .learning ul li::after,
+  .learning ul li:hover .txt {
     display: none;
   }
 
+  /* (1160px) con */
   .con {
     padding: 0;
   }
@@ -320,6 +321,7 @@
     display: none;
   }
 
+  /* (1160px) contents */
   .contents {
     padding-top: 70px;
   }
@@ -350,6 +352,7 @@
     font-size: 13px;
   }
 
+  /* (1160px) blog */
   .blog .swiper {
     height: 360px;
     padding-bottom: 50px;
@@ -385,7 +388,7 @@
     font-size: 13px;
   }
 
-
+  /* (1160px) curriculum */
   .curriculum {
     padding-inline: 20px;
     padding-top: 30px;
@@ -405,7 +408,6 @@
 
   .curriculum .list_box {
     width: 300px;
-    height: 100%;
   }
 
   .contact .inner {
@@ -599,7 +601,7 @@
   main .more {
     height: auto;
     padding: 14px 30px;
-    font-size: clamp(2.6vw, 1rem, 2.8vw);
+    font-size: clamp(2.8vw, 1rem, 3vw);
   }
 
   .main_visual .pager {
@@ -693,8 +695,9 @@
   footer .f_bottom .f_con1 span:nth-of-type(1) {
     padding-inline-start: 0;
   }
-footer .f_bottom .copy{
-  text-align: left;
-  margin-top: 10px;
-}
+
+  footer .f_bottom .copy {
+    text-align: left;
+    margin-top: 10px;
+  }
 }
