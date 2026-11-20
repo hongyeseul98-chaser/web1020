@@ -160,6 +160,11 @@
 
 
   /* main_visual */
+  .main_visual {
+
+    padding-top: 64px;
+  }
+
   .txt_area .tit {
     font-size: 42px;
   }
@@ -412,9 +417,146 @@
   }
 
   .contact .inner article h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
-    .contact .inner article p {
+
+  .contact .inner article p {
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  header .right a {
+    display: none;
+  }
+
+  .main_visual {
+    height: calc(100vh - 64px);
+    min-height: 500px;
+    max-height: 744px;
+  }
+
+  .main_visual .swiper li .txt_area {
+    height: 100%;
+    padding: 80px 0 80px 80px;
+  }
+
+  .info {
+    padding: 56px 0;
+  }
+
+  .article_top {
+    height: 50px;
+  }
+
+  .article_top .slide {
+    width: 100%;
+    height: 100%;
+    min-height: 32px;
+    overflow: hidden;
+  }
+
+  .article_top .slide .swiper li a {
+    font-size: 1rem;
+  }
+
+  .article_top .more {
+    display: none;
+  }
+
+  .curriculum .inner {
+    height: 220px;
+  }
+
+  .curriculum .inner a .txt_box {
+    width: auto;
+  }
+
+  .curriculum .inner a {
+    padding: 6vw 5vw;
+  }
+
+  .curriculum p {
+    margin-bottom: 0;
+    font-size: 2.5vw;
+  }
+
+  .curriculum span {
+    display: none;
+  }
+
+  .curriculum .list_box {
+    width: 52%;
+  }
+
+  .curriculum .list_box li {
+    font-size: 1.7vw;
+    min-height: auto;
+  }
+
+  footer {
+    padding: 24px 16px 40px;
+    font-size: 13px;
+  }
+
+  footer .f_top .logo_box {
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  footer .f_top .logo_box .logo {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  footer .f_top .logo_box .logo_b {
+    max-width: 100%;
+    gap: 16px;
+    font-size: .75rem;
+    flex-wrap: wrap;
+  }
+
+  footer .f_top .btn_box {
+    max-width: 100%;
+    gap: 8px;
+    height: auto;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .sns a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sns a img {
+    width: 50%;
+  }
+
+
+  .select_box {
+    width: 132px;
+    height: 36px;
+  }
+
+
+  .select_box button {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .top a {
+    width: 80px;
+    height: 36px;
+    font-size: 13px;
+    padding: 0 12px
+  }
+
+  footer .f_bottom {
+    margin-top: 24px;
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {}
