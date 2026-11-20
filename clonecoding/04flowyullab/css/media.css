@@ -112,10 +112,16 @@
     width: 100%;
     margin: 0;
     border: 0;
+    padding-inline: 1vw;
   }
 
   header .container .all_con ul.list>li:last-child {
     border: 0;
+  }
+  header .container .all_con ul.list>li.on button {
+    display: block;
+    padding: 1vw 20px 2vw;
+    border-bottom: 1px solid var(--gray-00);
   }
 
   header .container .all_con ul.list>li button {
@@ -156,6 +162,7 @@
 
   header .container .all_con ul.list>li.on ul {
     display: block;
+    padding: 3vw 3vw 1vw;
   }
 
 
@@ -559,4 +566,135 @@
 }
 
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+
+  .main_visual {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
+  .main_visual .swiper li {
+    align-items: center;
+  }
+
+  .main_visual .swiper li .txt_area {
+    height: 80%;
+    padding: 40px;
+  }
+
+  .txt_area .sub_txt {
+    font-size: 2.6vw;
+  }
+
+  .txt_area .tit {
+    font-size: 5.5vw;
+  }
+
+  .txt_area .txt {
+    font-size: 2.75vw;
+    line-height: 1.3;
+  }
+
+  main .more {
+    height: auto;
+    padding: 14px 30px;
+    font-size: clamp(2.6vw, 1rem, 2.8vw);
+  }
+
+  .main_visual .pager {
+    height: 6vh;
+    font-size: 12px;
+    padding-bottom: 1vh;
+  }
+
+  .main_visual .pager button {
+    font-size: 2rem;
+  }
+
+
+  .article_top {
+    height: 6vw;
+    padding: 6vw 4vw;
+  }
+
+  .article_top .slide .swiper li a {
+    font-size: 3vw;
+    gap: 10px;
+    padding-inline: 1vw;
+
+  }
+
+  .article_top .slide .swiper li a .txt {
+    flex: 1;
+  }
+
+
+  .article_top .slide .swiper li a .day {
+    display: none;
+  }
+
+  .article_bottom {
+    margin-top: 5vh;
+    padding-inline: 0;
+  }
+
+  .learning,
+  .con .inner,
+  .curriculum,
+  .contact .inner {
+    padding-inline: 0;
+  }
+
+  .curriculum .inner a {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .curriculum .inner a .txt_box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .curriculum p {
+    font-size: 3vw;
+  }
+
+  .curriculum .list_box {
+    width: 100%;
+    height: auto;
+  }
+
+  .curriculum .list_box li {
+    height: 34px;
+  }
+
+  footer .f_top {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  footer .f_top .logo_box {
+    order: 2;
+  }
+
+  footer .f_top .btn_box {
+    order: 1;
+  }
+
+  footer .f_top .btn_box .top {
+    margin-left: auto;
+  }
+
+  footer .f_bottom {
+    flex-direction: column;
+  }
+
+  footer .f_bottom .f_con1 span:nth-of-type(1) {
+    padding-inline-start: 0;
+  }
+footer .f_bottom .copy{
+  text-align: left;
+  margin-top: 10px;
+}
+}

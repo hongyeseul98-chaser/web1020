@@ -16,6 +16,19 @@ const setScrollLocked = (isLocked) => {
   }
 }
 
+document.querySelectorAll('header .container .all_con ul.list>li').forEach(function (li) {
+  const button = li.querySelector('button');
+
+  //버튼이 없는 항목은 건너뛴다
+  if(!button) return;
+
+  button.addEventListener('click', function(){
+    //css의 미디어쿼리와 동일하게 1160px 이하에서만 실행
+    if (!window.matchMedia('(max-width: 1160px)').matches) return;
+    li.classList.toggle('on');
+  });
+})
+
 //(기억하기)직전 스크롤 위치 - 지금 위치와 비교해서 사용자가 아래로 내리는지 위로 올리는지 판단
 let lastScrollY = window.scrollY;
 
@@ -196,13 +209,13 @@ const blogSlide = new Swiper('.blog .swiper', {
 //화면 크기가 바뀌면 카드 너비와 슬라이드 위치가 달라집니다
 //그래서 Swiper에게 '다시계산해'라고 알려주는 함수
 const updateResponsiveSlides = () => {
-  [mainSlide, infoSlide, contentsSlide, blogSlide].forEach((slide)=>{
+  [mainSlide, infoSlide, contentsSlide, blogSlide].forEach((slide) => {
     slide.update();
   });
 }
 //리사이즈 중에는 계산을 계속하지 않고, 잠깐 멈춘 뒤 한번만 계산합니다
 let resizeTimer;
-window.addEventListener('resize',()=>{
+window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(updateResponsiveSlides, 120);
 });
