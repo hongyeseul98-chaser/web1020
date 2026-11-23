@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=DM+Serif+Text&family=Merriweather:wght@300;400;700;900&display=swap');
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
 
@@ -103,7 +103,7 @@ section {
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 9999;
   background: var(--header);
   backdrop-filter: blur(10px);
   will-change: transform;
@@ -141,25 +141,24 @@ nav {
 }
 
 .primary_nav a {
-  opacity: .85;
+  opacity: 0.85;
   padding: 6px 10px;
   display: flex;
 }
 
 .primary_nav a:hover,
-.mobile_nav a:focus {
+.mobile_nav a:hover {
   color: var(--accent);
 }
 
-.primary_nav a.is_active:hover,
-.mobile_nav a.is_active:focus {
+.primary_nav a.is_active,
+.mobile_nav a.is_active {
   background: var(--accent);
   color: #0c1217;
   font-weight: 600;
   border-radius: 50px;
   padding-inline: 20px;
 }
-
 
 .icon_mdi_hamburger_menu {
   display: inline-flex;
@@ -183,7 +182,7 @@ nav {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width:1024px) {
   .primary_nav {
     display: none;
   }
@@ -199,7 +198,7 @@ nav {
   top: 64px;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 9998;
   background: var(--card);
   border-bottom: 1px solid var(--border);
 }
@@ -218,7 +217,7 @@ nav {
 .mobile_nav a {
   padding: 10px 8px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, .03);
+  background: rgba(255, 255, 255, 0.03);
   cursor: pointer;
 }
 
@@ -281,7 +280,7 @@ nav {
   padding: 14px 20px;
   border-radius: 999px;
   background: var(--accent);
-  color: #0c1217;
+  color: #0a1217;
   font-weight: 800;
   transform: translateY(12px);
   opacity: 0;
@@ -290,11 +289,13 @@ nav {
 /* marquee_section */
 .marquee_section {
   min-height: 150vh;
-  /* background-color:#03423d; */
-  background:
-    radial-gradient(circle at 0% 0%, color-mix(in oklch, #7c3aed 72%, white) 0 18%, transparent 42%),
-    radial-gradient(circle at 100% 12%, #06b6d4 0 16%, transparent 42%),
-    linear-gradient(145deg, color-mix(in oklch, #7c3aed 8%, white), color-mix(in oklch, #06b6d4 18%, black));
+  background-color: #ffe2a6;
+  background-image:
+    radial-gradient(circle at 50% 50%, #ff8a1e 0% 18%, transparent 34%),
+    radial-gradient(circle at 82% 18%, color-mix(in oklch, #ff8a1e 48%, white) 0 16%, transparent 32%),
+    radial-gradient(circle at 72% 76%, #ffe2a6 0 18%, transparent 36%),
+    radial-gradient(circle at 24% 82%, color-mix(in oklch, #ffe2a6 55%, black) 0 16%, transparent 34%);
+  background-blend-mode: screen, normal, multiply, normal;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -305,7 +306,7 @@ nav {
   color: var(--card);
 }
 
-.marquee_wrap {
+.maquee_wrap {
   width: 100%;
   height: 5rem;
   font-size: 5rem;
@@ -327,7 +328,7 @@ nav {
   margin-right: 40px;
 }
 
-.reverse .marquee_row {
+.reverse .marquee_row{
   left: auto;
   right: 0;
 }
@@ -340,21 +341,17 @@ nav {
   font-weight: 800;
 }
 
-
-
 /* cta_section */
 .cta_section {
   text-align: center;
   background: var(--card);
-  background-color: #14b8a6;
   background-image:
-    radial-gradient(circle at 14% 18%, color-mix(in oklch, #fb7185 88%, white) 0 20%, transparent 44%),
-    radial-gradient(circle at 88% 28%, color-mix(in oklch, #14b8a6 78%, white) 0 18%, transparent 42%),
-    radial-gradient(circle at 66% 88%, color-mix(in oklch, #fb7185 38%, #14b8a6) 0 22%, transparent 48%),
-    linear-gradient(142deg, color-mix(in oklch, #fb7185 12%, white), color-mix(in oklch, #14b8a6 32%, black));
-  background-blend-mode: screen, lighten, multiply, normal;
+    radial-gradient(circle at 50% 50%, #ff8a1e 0% 18%, transparent 34%),
+    radial-gradient(circle at 82% 18%, color-mix(in oklch, #ff8a1e 48%, white) 0 16%, transparent 32%),
+    radial-gradient(circle at 72% 76%, #ffe2a6 0 18%, transparent 36%),
+    radial-gradient(circle at 24% 82%, color-mix(in oklch, #ffe2a6 55%, black) 0 16%, transparent 34%);
+  background-blend-mode: screen, normal, multiply, normal;
 }
-
 
 .cta_section h2 {
   margin: 0 0 10px;
@@ -377,7 +374,7 @@ nav {
   color: #0c1217;
   font-weight: 800;
   transform: translateY(20px) translateX(20px);
-  opacity: 0;
+  opacity: 0
 }
 
 .magnet_zone {
