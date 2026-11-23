@@ -174,7 +174,7 @@
     font-size: 42px;
   }
 
-  /* article_bottom */
+  /* (1160px) article_bottom */
   .article_bottom {
     height: auto;
     display: block;
@@ -410,6 +410,7 @@
     width: 300px;
   }
 
+  /* (1160px) contact */
   .contact .inner {
     height: auto;
     flex-direction: column;
@@ -453,7 +454,8 @@
   .info {
     padding: 56px 0;
   }
-
+ 
+  /* (1024px) article_top */
   .article_top {
     height: 50px;
   }
@@ -473,6 +475,7 @@
     display: none;
   }
 
+  /* (1024px) curriculum */
   .curriculum .inner {
     height: 220px;
   }
@@ -503,6 +506,7 @@
     min-height: auto;
   }
 
+  /* (1024px) footer */
   footer {
     padding: 24px 16px 40px;
     font-size: 13px;
@@ -615,6 +619,7 @@
   }
 
 
+  /* (768px) article_top */
   .article_top {
     height: 6vw;
     padding: 6vw 4vw;
@@ -635,12 +640,14 @@
   .article_top .slide .swiper li a .day {
     display: none;
   }
-
+ 
+  /* (768px) article_bottom */
   .article_bottom {
     margin-top: 5vh;
     padding-inline: 0;
   }
 
+  /* (768px) 전체 콘텐츠 박스 패딩 */
   .learning,
   .con .inner,
   .curriculum,
@@ -648,6 +655,7 @@
     padding-inline: 0;
   }
 
+  /* (768px) curriculum */
   .curriculum .inner a {
     flex-wrap: wrap;
     gap: 20px;
@@ -671,6 +679,7 @@
     height: 34px;
   }
 
+  /* (768px) footer */
   footer .f_top {
     flex-direction: column;
     gap: 24px;
